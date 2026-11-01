@@ -1,0 +1,298 @@
+document.addEventListener("DOMContentLoaded", () => {
+
+  // --- 株価 & IR データベース ---
+  const STOCK_DATA_HISTORY = [
+    { date: "2025/02/10", p285A: "6,210", diff285A: "▲ +12 (+0.19%)", open: "6,180", high: "6,250", low: "6,150", vol: "10,210,000", type: "normal" },
+    { date: "2025/02/12", p285A: "6,280", diff285A: "▲ +70 (+1.12%)", open: "6,210", high: "6,310", low: "6,190", vol: "11,500,000", type: "coop" },
+    { date: "2025/02/13", p285A: "6,190", diff285A: "▼ -90 (-1.43%)", open: "6,280", high: "6,290", low: "6,150", vol: "14,100,000", type: "alone" },
+    { date: "2025/02/14", p285A: "6,329", diff285A: "▲ +139 (+2.24%)", open: "6,210", high: "6,350", low: "6,180", vol: "12,459,300", type: "surge" }
+  ];
+
+  const IR_EVENTS = [
+    { title: "好決算発表！", sub: "純利益が市場予想を大幅上回り！", type: "good" },
+    { title: "材料出尽くし...", sub: "好決算発表も寄り付きから大暴落", type: "bad" },
+    { title: "NAND供給逼迫！", sub: "データセンター需要急増で単価上昇", type: "good" },
+    { title: "サムスン増産報道", sub: "競合の供給増懸念で市況冷え込み", type: "bad" },
+    { title: "設備投資拡大（CAPEX）", sub: "次世代NAND工場へ数千億円投入", type: "warn" }
+  ];
+
+  // ゲーム状態管理
+  const state = {
+    credit: 1000,
+    payout: 0,
+    totalG: 0,
+    mode: "NORMAL",
+    atNav: 0,
+    czGames: 0,
+    isSpinning: [false, false, false],
+    stoppedReels: [false, false, false],
+    reelResults: [0, 0, 0],
+    stockIndex: 3,
+    pendingFlag: null,
+    spinInterval: null
+  };
+
+  // DOM要素の安全な取得
+  const elCredit = document.getElementById("valCredit");
+  const elPayout = document.getElementById("valPayout");
+  const elAtNav = document.getElementById("valAtNav");
+  const elTotalG = document.getElementById("valTotalG");
+  const elIrTicker = document.getElementById("irTicker");
+
+  const elPrice285A = document.getElementById("price285A");
+  const elDiff285A = document.getElementById("diff285A");
+  const elOpen = document.getElementById("valOpen");
+  const elHigh = document.getElementById("valHigh");
+  const elLow = document.getElementById("valLow");
+  const elVolume = document.getElementById("valVolume");
+
+  const elScreenEffect = document.getElementById("screenEffect");
+  const elEffectTitle = document.getElementById("effectTitle");
+  const elEffectSub = document.getElementById("effectSub");
+
+  const btnLever = document.getElementById("btnLever");
+  const btnStops = [
+    document.getElementById("btnStop1"),
+    document.getElementById("btnStop2"),
+    document.getElementById("btnStop3")
+  ];
+
+  // 株価ダッシュボード更新（エラー回避の安全設計）
+  function updateStockBoard() {
+    const data = STOCK_DATA_HISTORY[state.stockIndex];
+    if (!data) return;
+
+    if (elPrice285A) elPrice285A.textContent = data.p285A;
+    if (elDiff285A) {
+      elDiff285A.textContent = data.diff285A;
+      elDiff285A.className = `stock-diff ${data.diff285A.includes('▲') ? 'plus' : 'minus'}`;
+    }
+    if (elOpen) elOpen.textContent = data.open;
+    if (elHigh) elHigh.textContent = data.high;
+    if (elLow) elLow.textContent = data.low;
+    if (elVolume) elVolume.textContent = data.vol;
+
+    if (elIrTicker) {
+      if (data.type === "alone") {
+        elIrTicker.textContent = "【株価警告】SNDK急騰も285A下落...『おいてけぼりZONE』示唆！";
+      } else if (data.type === "coop") {
+        elIrTicker.textContent = "【市況追風】日米NAND同時高！『日米NAND共闘』演出発生！";
+      } else {
+        elIrTicker.textContent = "【IR速報】半導体市況監視中。次回決算ガイダンスに要注目。";
+      }
+    }
+  }
+
+  // 抽選ロジック
+  function lottery() {
+    const rand = Math.random() * 1000;
+    if (rand < 15) return { type: "CHERRY_STRONG", pay: 0, name: "強チェリー" };
+    if (rand < 50) return { type: "CHERRY_WEAK", pay: 0, name: "弱チェリー" };
+    if (rand < 110) return { type: "WATERMELON", pay: 3, name: "スイカ" };
+    if (rand < 400) return { type: "BELL", pay: 9, name: "ベル" };
+    if (rand < 600) return { type: "REPLAY", pay: 0, name: "リプレイ" };
+    return { type: "MISS", pay: 0, name: "ハズレ" };
+  }
+
+  // レバーON処理
+  if (btnLever) {
+    btnLever.addEventListener("click", () => {
+      if (state.credit < 3 && state.mode !== "AT" && state.mode !== "SUPER_AT") {
+        alert("メダルが不足しています！デバッグボタンで補充してください。");
+        return;
+      }
+
+      if (state.mode !== "AT" && state.mode !== "SUPER_AT") {
+        state.credit -= 3;
+      }
+      state.payout = 0;
+      state.totalG++;
+
+      state.stockIndex = (state.stockIndex + 1) % STOCK_DATA_HISTORY.length;
+      updateStockBoard();
+
+      const flag = lottery();
+      state.pendingFlag = flag;
+
+      btnLever.disabled = true;
+      btnStops.forEach(btn => { if(btn) btn.disabled = false; });
+
+      state.isSpinning = [true, true, true];
+      state.stoppedReels = [false, false, false];
+      startReelSpin();
+
+      triggerScreenEffect(flag);
+      updateUI();
+    });
+  }
+
+  // リール回転
+  function startReelSpin() {
+    for (let i = 1; i <= 3; i++) {
+      const strip = document.getElementById(`strip${i}`);
+      if (strip) {
+        strip.style.transition = "none";
+        strip.style.transform = "translateY(-120px)";
+      }
+    }
+
+    if (state.spinInterval) clearInterval(state.spinInterval);
+
+    state.spinInterval = setInterval(() => {
+      for (let i = 1; i <= 3; i++) {
+        if (state.isSpinning[i - 1]) {
+          const strip = document.getElementById(`strip${i}`);
+          if (strip) {
+            const currentTop = parseInt(strip.style.transform.replace("translateY(", "").replace("px)", "")) || 0;
+            let newTop = currentTop + 20;
+            if (newTop >= 0) newTop = -120;
+            strip.style.transform = `translateY(${newTop}px)`;
+          }
+        }
+      }
+    }, 20);
+  }
+
+  // ストップボタン
+  btnStops.forEach((btn, idx) => {
+    if (!btn) return;
+    btn.addEventListener("click", () => {
+      if (!state.isSpinning[idx]) return;
+
+      state.isSpinning[idx] = false;
+      state.stoppedReels[idx] = true;
+      btn.disabled = true;
+
+      determineSymbol(idx);
+
+      if (state.stoppedReels.every(v => v)) {
+        clearInterval(state.spinInterval);
+        if (btnLever) btnLever.disabled = false;
+        evaluateRound();
+      }
+    });
+  });
+
+  function determineSymbol(reelIdx) {
+    const flag = state.pendingFlag;
+    let symbolId = 1;
+
+    if (flag.type === "BELL") symbolId = 2;
+    else if (flag.type === "REPLAY") symbolId = 3;
+    else if (flag.type === "CHERRY_WEAK" || flag.type === "CHERRY_STRONG") symbolId = 4;
+    else if (flag.type === "WATERMELON") symbolId = 5;
+    else if (state.mode === "AT" && Math.random() < 0.2) symbolId = 0;
+
+    state.reelResults[reelIdx] = symbolId;
+
+    const strip = document.getElementById(`strip${reelIdx + 1}`);
+    if (strip) {
+      strip.style.transition = "transform 0.1s ease-out";
+      strip.style.transform = `translateY(-${symbolId * 40}px)`;
+    }
+  }
+
+  // 演出制御
+  function triggerScreenEffect(flag) {
+    if (!elScreenEffect) return;
+    elScreenEffect.className = "screen-effect";
+
+    if (Math.random() < 0.3) {
+      const ir = IR_EVENTS[Math.floor(Math.random() * IR_EVENTS.length)];
+      if (elEffectTitle) elEffectTitle.textContent = ir.title;
+      if (elEffectSub) elEffectSub.textContent = ir.sub;
+      if (ir.type === "good") elScreenEffect.classList.add("flash-gold");
+      else if (ir.type === "bad") elScreenEffect.classList.add("flash-red");
+      return;
+    }
+
+    if (flag.type === "CHERRY_STRONG") {
+      if (elEffectTitle) elEffectTitle.textContent = "🚨 強NAND需要検出！";
+      if (elEffectSub) elEffectSub.textContent = "CZ「NAND品薄CHANCE」大チャンス！";
+      elScreenEffect.classList.add("flash-red");
+    } else if (flag.type === "WATERMELON") {
+      if (elEffectTitle) elEffectTitle.textContent = "🍉 設備投資ログ確認";
+      if (elEffectSub) elEffectSub.textContent = "市況好転の兆し...？";
+    } else {
+      if (elEffectTitle) elEffectTitle.textContent = "RUSH";
+      if (elEffectSub) elEffectSub.textContent = "【IR速報】市況監視中...";
+    }
+  }
+
+  // ラウンド評価
+  function evaluateRound() {
+    const flag = state.pendingFlag;
+    state.payout = flag.pay;
+    state.credit += flag.pay;
+
+    if (state.mode === "NORMAL") {
+      if (flag.type === "CHERRY_STRONG" || Math.random() < 0.08) {
+        state.mode = "CZ";
+        state.czGames = 5;
+        if (elEffectTitle) elEffectTitle.textContent = "🔥 NAND品薄CHANCE";
+        if (elEffectSub) elEffectSub.textContent = "5G以内にNAND価格を急騰させよ！";
+      }
+    } else if (state.mode === "CZ") {
+      state.czGames--;
+      if (flag.type === "BELL" || flag.type === "CHERRY_STRONG" || Math.random() < 0.3) {
+        state.mode = "AT";
+        state.atNav = 100;
+        if (elEffectTitle) elEffectTitle.textContent = "🎉 SUPER CYCLE RUSH";
+        if (elEffectSub) elEffectSub.textContent = "初期100枚スタート！半導体バブル到来！";
+      } else if (state.czGames <= 0) {
+        state.mode = "NORMAL";
+        if (elEffectTitle) elEffectTitle.textContent = "RUSH";
+        if (elEffectSub) elEffectSub.textContent = "CZ終了... 市況冷え込み";
+      }
+    } else if (state.mode === "AT" || state.mode === "SUPER_AT") {
+      state.atNav -= (flag.pay > 0 ? flag.pay : 1);
+
+      if (flag.type === "CHERRY_STRONG") {
+        const add = 50;
+        state.atNav += add;
+        if (elEffectTitle) elEffectTitle.textContent = `⚡ 上乗せ +${add}枚！`;
+        if (elEffectSub) elEffectSub.textContent = "AIデータセンター需要爆発！";
+      }
+
+      if (state.mode === "AT" && state.atNav > 150) {
+        state.mode = "SUPER_AT";
+        if (elEffectTitle) elEffectTitle.textContent = "👑 AI CAPEX BUBBLE";
+        if (elEffectSub) elEffectSub.textContent = "極上の設備投資バブルモード！！";
+      }
+
+      if (state.atNav <= 0) {
+        state.atNav = 0;
+        state.mode = "NORMAL";
+        if (elEffectTitle) elEffectTitle.textContent = "RUSH";
+        if (elEffectSub) elEffectSub.textContent = "AT終了「設備投資回収懸念」";
+      }
+    }
+
+    updateUI();
+  }
+
+  // UI更新
+  function updateUI() {
+    if (elCredit) elCredit.textContent = state.credit;
+    if (elPayout) elPayout.textContent = state.payout;
+    if (elAtNav) elAtNav.textContent = state.atNav;
+    if (elTotalG) elTotalG.textContent = state.totalG;
+  }
+
+  // デバッグボタン処理
+  const btnCz = document.getElementById("btnDebugCz");
+  if (btnCz) btnCz.addEventListener("click", () => { state.mode = "CZ"; state.czGames = 5; updateUI(); });
+
+  const btnAt = document.getElementById("btnDebugAt");
+  if (btnAt) btnAt.addEventListener("click", () => { state.mode = "AT"; state.atNav = 100; updateUI(); });
+
+  const btnAdd = document.getElementById("btnDebugAdd");
+  if (btnAdd) btnAdd.addEventListener("click", () => { state.credit += 1000; updateUI(); });
+
+  const btnRst = document.getElementById("btnReset");
+  if (btnRst) btnRst.addEventListener("click", () => { state.credit = 1000; state.totalG = 0; state.mode = "NORMAL"; state.atNav = 0; updateUI(); });
+
+  // 初期化実行
+  updateStockBoard();
+  updateUI();
+});
