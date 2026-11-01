@@ -1,0 +1,348 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body {
+  background: #04060a;
+  color: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+/* 筐体フレーム：メタリックシルバー＆ブルーネオン */
+.pachislot-cabinet {
+  width: 100%;
+  max-width: 440px;
+  background: linear-gradient(180deg, #101828 0%, #080d1a 50%, #020408 100%);
+  border: 4px solid #00d2ff;
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 0 35px rgba(0, 210, 255, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.disclaimer {
+  font-size: 8px;
+  color: #88a0c0;
+  text-align: center;
+  background: rgba(0,0,0,0.6);
+  padding: 2px;
+}
+
+/* 最上部：KIOXIA 巨大ロゴ役物 */
+.top-logo-panel {
+  background: radial-gradient(circle, #ffffff 0%, #d0e8ff 40%, #004488 100%);
+  border: 2px solid #00d2ff;
+  border-radius: 8px;
+  padding: 6px 0;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 210, 255, 0.8);
+}
+
+.top-brand-logo {
+  font-size: 28px;
+  font-weight: 900;
+  color: #000;
+  letter-spacing: 4px;
+  font-family: 'Arial Black', sans-serif;
+}
+
+/* メイン液晶画面（チャート＆ネオン背景） */
+.main-screen {
+  background: linear-gradient(180deg, #021027 0%, #082856 50%, #010814 100%);
+  border: 3px solid #00d2ff;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.9);
+}
+
+/* 株価ダッシュボード */
+.stock-dashboard {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(0, 15, 35, 0.85);
+  border: 1px solid #0088cc;
+  border-radius: 6px;
+  padding: 6px 8px;
+}
+
+.stock-title {
+  font-size: 11px;
+  color: #80c0ff;
+  font-weight: bold;
+}
+
+.stock-price-hero {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.price-val {
+  font-size: 20px;
+  font-weight: 900;
+  color: #fff;
+  font-family: monospace;
+}
+
+.price-unit {
+  font-size: 10px;
+  color: #aaa;
+}
+
+.stock-diff.plus { color: #ff3333; font-size: 10px; font-weight: bold; }
+.stock-diff.minus { color: #00e676; font-size: 10px; font-weight: bold; }
+
+/* 板情報詳細 */
+.stock-details {
+  font-size: 8px;
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  color: #80a0c0;
+}
+
+.highlight-high { color: #ff5555; }
+
+/* 液晶演出ボックス（NAND SUPER CYCLE RUSH） */
+.screen-effect {
+  background: radial-gradient(circle, rgba(255, 100, 0, 0.2) 0%, rgba(0,0,0,0.8) 100%);
+  border: 2px solid #ffaa00;
+  border-radius: 6px;
+  padding: 8px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 170, 0, 0.3);
+}
+
+.catch-phrase {
+  font-size: 9px;
+  color: #00d2ff;
+  letter-spacing: 2px;
+}
+
+.rush-logo-box {
+  margin: 2px 0;
+}
+
+.rush-sub {
+  font-size: 14px;
+  font-weight: 900;
+  color: #ffd700;
+  text-shadow: 0 0 6px #ff6600;
+}
+
+.rush-main {
+  font-size: 16px;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 0 8px #00d2ff;
+  letter-spacing: 1px;
+}
+
+.rush-title {
+  font-size: 22px;
+  font-weight: 900;
+  color: #ff3300;
+  text-shadow: 0 0 10px #ff3300, 0 0 20px #ffd700;
+  letter-spacing: 3px;
+}
+
+.effect-sub {
+  font-size: 9px;
+  color: #80d0ff;
+}
+
+/* 下部銘柄チッカー */
+.stock-ticker-bar {
+  font-size: 8px;
+  background: #000;
+  padding: 3px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-around;
+  color: #aaa;
+  font-family: monospace;
+}
+
+.stock-ticker-bar .plus { color: #ff3333; }
+.stock-ticker-bar .minus { color: #00e676; }
+
+/* リール＆BUY/SELLサイドランプ */
+.reel-section {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #000;
+  padding: 4px;
+  border: 2px solid #00d2ff;
+  border-radius: 8px;
+}
+
+.side-lamp {
+  width: 40px;
+  height: 120px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  font-size: 10px;
+}
+
+.lamp-buy {
+  background: linear-gradient(180deg, #0033aa 0%, #00aaff 100%);
+  color: #fff;
+  border: 1px solid #00e5ff;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+}
+
+.lamp-sell {
+  background: linear-gradient(180deg, #aa0000 0%, #ff3333 100%);
+  color: #fff;
+  border: 1px solid #ff5252;
+  box-shadow: 0 0 10px rgba(255, 82, 82, 0.5);
+}
+
+.lamp-icon { font-size: 16px; }
+
+/* 3リール */
+.reel-window {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+  height: 120px;
+  overflow: hidden;
+}
+
+.reel {
+  flex: 1;
+  height: 120px;
+  background: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.reel-strip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.symbol {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: #111;
+  border-bottom: 1px dashed #ccc;
+}
+
+.symbol-7 { background: #ffebee; color: #d32f2f; font-size: 18px; }
+.symbol-chip { background: #222; color: #00d2ff; font-size: 10px; border: 1px solid #00d2ff; }
+.symbol-bell { color: #fbc02d; font-size: 16px; }
+.symbol-rep { color: #1976d2; }
+
+/* メーター類 */
+.info-panel {
+  display: flex;
+  justify-content: space-between;
+  background: #000;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #00d2ff;
+}
+
+.info-box { text-align: center; }
+.info-box .label { font-size: 8px; color: #80c0ff; }
+.info-box .val { font-size: 14px; color: #00ff66; font-family: monospace; font-weight: bold; }
+
+/* 操作ボタン */
+.control-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.btn-lever {
+  background: linear-gradient(180deg, #00c853 0%, #1b5e20 100%);
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 900;
+  border-radius: 8px;
+  border: 2px solid #69f0ae;
+  box-shadow: 0 4px 0 #003300, 0 0 10px rgba(0, 230, 118, 0.4);
+  cursor: pointer;
+}
+
+.btn-lever:disabled { background: #444; border-color: #666; box-shadow: none; }
+
+.stop-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-stop-round {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ff5252, #b71c1c);
+  border: 3px solid #fff;
+  box-shadow: 0 4px 0 #5f0000, 0 0 12px rgba(255, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+.btn-stop-round:disabled {
+  background: radial-gradient(circle at 30% 30%, #555, #222);
+  border-color: #666;
+  box-shadow: none;
+}
+
+/* 下パネル（メインアート再現） */
+.lower-panel {
+  background: linear-gradient(135deg, #021027 0%, #0a3570 50%, #000000 100%);
+  border: 2px solid #00d2ff;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: inset 0 0 15px rgba(0, 210, 255, 0.5);
+}
+
+.panel-title-sub { font-size: 10px; color: #00d2ff; }
+.panel-title-main { font-size: 26px; font-weight: 900; color: #fff; text-shadow: 0 0 10px #00d2ff; }
+.panel-title-kioxia { font-size: 20px; font-weight: 900; color: #fff; }
+.panel-title-sub2 { font-size: 11px; color: #ff5252; }
+.panel-copy { font-size: 8px; color: #aaa; margin-top: 4px; }
+
+/* デバッグ */
+.debug-panel { display: flex; gap: 4px; justify-content: center; }
+.debug-panel button { background: #111; color: #666; border: 1px solid #333; font-size: 8px; padding: 2px 4px; }
