@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>スマスロ285A キオクシア</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="pachislot-cabinet">
+  <!-- 免責表示 -->
+  <div class="disclaimer">
+    【非公式パロディ】実在の企業・人物とは関係ありません。（設定1固定 / DEMO MODE）
+  </div>
+
+  <!-- 最上部：KIOXIA 巨大ネオン役物 -->
+  <div class="top-logo-panel">
+    <div class="top-brand-logo">KIOXIA</div>
+  </div>
+
+  <!-- メイン液晶エリア（サイバーブルー＆株式チャート風） -->
+  <div class="main-screen">
+    <!-- 上部：リアル株価＆板情報ボード -->
+    <div class="stock-dashboard">
+      <div class="stock-main-info">
+        <div class="stock-title">285A キオクシア</div>
+        <div class="stock-price-hero">
+          <span class="price-val" id="price285A">6,329</span><span class="price-unit">円</span>
+          <span class="stock-diff plus" id="diff285A">▲ +63 (+1.00%)</span>
+        </div>
+      </div>
+      <!-- 始値・高値・安値・出来高 -->
+      <div class="stock-details">
+        <div class="detail-row"><span>始値</span><span id="valOpen">6,210</span></div>
+        <div class="detail-row"><span class="highlight-high">高値</span><span class="highlight-high" id="valHigh">6,350</span></div>
+        <div class="detail-row"><span>安値</span><span id="valLow">6,180</span></div>
+        <div class="detail-row"><span>出来高</span><span id="valVolume">12,459,300</span></div>
+      </div>
+    </div>
+
+    <!-- 液晶中央：RUSHロゴ＆演出エリア -->
+    <div class="screen-effect" id="screenEffect">
+      <div class="catch-phrase">メモリで世界を変える</div>
+      <div class="rush-logo-box">
+        <div class="rush-sub">NAND</div>
+        <div class="rush-main">SUPER CYCLE</div>
+        <div class="rush-title" id="effectTitle">RUSH</div>
+      </div>
+      <div class="effect-sub" id="effectSub">【IR速報】市況監視中...</div>
+    </div>
+
+    <!-- 液晶下部：日経平均・銘柄チッカー -->
+    <div class="stock-ticker-bar">
+      <span>日経平均 <span class="minus">63,290.11 ▼-1,369.36</span></span>
+      <span>キオクシア 285A <span class="plus">6,329 ▲+63</span></span>
+      <span>SNDK <span class="minus">51,770.31 ▼-572.25</span></span>
+    </div>
+  </div>
+
+  <!-- リールセクション（左右にBUYブル/SELLベアランプを配置） -->
+  <div class="reel-section">
+    <!-- 左ランプ：BUY（ブル） -->
+    <div class="side-lamp lamp-buy">
+      <div class="lamp-icon">🐂</div>
+      <div class="lamp-text">BUY</div>
+    </div>
+
+    <!-- 中央：3リール -->
+    <div class="reel-window">
+      <div class="reel" id="reel1">
+        <div class="reel-strip" id="strip1">
+          <div class="symbol symbol-7">7</div>
+          <div class="symbol symbol-chip">KIOXIA</div>
+          <div class="symbol symbol-bell">🔔</div>
+          <div class="symbol symbol-rep">再</div>
+          <div class="symbol symbol-cherry">🍒</div>
+          <div class="symbol symbol-watermelon">🍉</div>
+        </div>
+      </div>
+      <div class="reel" id="reel2">
+        <div class="reel-strip" id="strip2">
+          <div class="symbol symbol-chip">KIOXIA</div>
+          <div class="symbol symbol-7">7</div>
+          <div class="symbol symbol-cherry">🍒</div>
+          <div class="symbol symbol-bell">🔔</div>
+          <div class="symbol symbol-rep">再</div>
+          <div class="symbol symbol-watermelon">🍉</div>
+        </div>
+      </div>
+      <div class="reel" id="reel3">
+        <div class="reel-strip" id="strip3">
+          <div class="symbol symbol-7">7</div>
+          <div class="symbol symbol-bell">🔔</div>
+          <div class="symbol symbol-chip">KIOXIA</div>
+          <div class="symbol symbol-rep">再</div>
+          <div class="symbol symbol-cherry">🍒</div>
+          <div class="symbol symbol-watermelon">🍉</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 右ランプ：SELL（ベア） -->
+    <div class="side-lamp lamp-sell">
+      <div class="lamp-icon">🐻</div>
+      <div class="lamp-text">SELL</div>
+    </div>
+  </div>
+
+  <!-- メーター＆カウンター -->
+  <div class="info-panel">
+    <div class="info-box"><div class="label">CREDIT</div><div class="val" id="valCredit">1000</div></div>
+    <div class="info-box"><div class="label">PAYOUT</div><div class="val" id="valPayout">0</div></div>
+    <div class="info-box"><div class="label">AT枚数</div><div class="val" id="valAtNav">0</div></div>
+    <div class="info-box"><div class="label">TOTAL G</div><div class="val" id="valTotalG">0</div></div>
+  </div>
+
+  <!-- 操作部（3連赤丸ボタン＆レバー） -->
+  <div class="control-panel">
+    <button class="btn btn-lever" id="btnLever">MAX BET & LEVER ON</button>
+    <div class="stop-buttons">
+      <button class="btn btn-stop-round" id="btnStop1" disabled></button>
+      <button class="btn btn-stop-round" id="btnStop2" disabled></button>
+      <button class="btn btn-stop-round" id="btnStop3" disabled></button>
+    </div>
+  </div>
+
+  <!-- 下パネル：スマスロ285A キオクシア メインビジュアル -->
+  <div class="lower-panel">
+    <div class="panel-title-sub">スマスロ</div>
+    <div class="panel-title-main">285A</div>
+    <div class="panel-title-kioxia">キオクシア</div>
+    <div class="panel-title-sub2">〜偽りの株主〜</div>
+    <div class="panel-copy">上がるのか、それとも—— 全ては、キミの手で。</div>
+  </div>
+
+  <!-- デバッグパネル -->
+  <div class="debug-panel">
+    <button id="btnDebugCz">強制CZ</button>
+    <button id="btnDebugAt">強制AT</button>
+    <button id="btnDebugAdd">メダル+1000</button>
+    <button id="btnReset">リセット</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
