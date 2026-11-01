@@ -1,16 +1,25 @@
-# Project Name
+# スマスロ285A キオクシア ～偽りの株主～
 
-個人利用を目的とした小規模ツール。
+キオクシア（285A）をモチーフにした**非公式パロディの個人用スロットゲーム**。実在の企業・人物とは無関係です。設定1固定のデモモードです。
 
-## 目的
-未定
+## ファイル
 
-## 現在の状態
-開発準備中
+- `index.html`：筐体・液晶・リール・ボタンのHTML
+- `style.css`：ネオン筐体デザイン
+- `script.js`：ゲーム内抽選、リール、CZ、AT、デバッグ操作
+- `data/285A_daily_close.json`：285A.Tの日次終値（2024-12-18から、yfinance取得）
+- `scripts/fetch_285a_closes.py`：終値JSONの取得・更新スクリプト
 
-## 開発方針
-共通開発規約に準拠。仕様と進捗は `docs/` 以下で管理する。
+## 使い方
 
-- [AI向け作業指示](AGENTS.md)
-- [仕様書](docs/SPECIFICATION.md)
-- [ロードマップ・進捗](docs/ROADMAP.md)
+`index.html` をブラウザで開くとデモ画面を操作できます。
+
+**株価JSONは現時点でゲーム画面とは未連携**です。既存の `script.js` は組み込みのデモ株価配列を表示します。
+
+## 終値データの更新
+
+GitHubの **Actions → Fetch 285A daily closes → Run workflow** を実行します。初回のJSON作成は2026-11-01に成功済みです。定期自動実行は設定していません。
+
+データはYahoo Financeから `yfinance` で取得した `Close`（株式分割調整後・配当調整前）を使用します。当日途中のデータを混ぜないよう、処理実行日の前日までを対象とします。履歴が取れなければ保存せず失敗します。
+
+開発運用： [AGENTS.md](AGENTS.md) / [仕様](docs/SPECIFICATION.md) / [進捗](docs/ROADMAP.md)
