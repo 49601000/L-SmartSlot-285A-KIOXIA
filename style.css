@@ -85,6 +85,12 @@ body {
   font-weight: bold;
 }
 
+.stock-date {
+  font-size: 10px;
+  color: #a8c8e8;
+  font-family: monospace;
+}
+
 .stock-price-hero {
   display: flex;
   align-items: baseline;

@@ -25,17 +25,18 @@
     <div class="stock-dashboard">
       <div class="stock-main-info">
         <div class="stock-title">285A キオクシア</div>
+        <div class="stock-date" id="valDate">----/--/--</div>
         <div class="stock-price-hero">
           <span class="price-val" id="price285A">6,329</span><span class="price-unit">円</span>
           <span class="stock-diff plus" id="diff285A">▲ +63 (+1.00%)</span>
         </div>
       </div>
-      <!-- 始値・高値・安値・出来高 -->
+      <!-- 終値JSON連携時は 前日終値・その日までの最高／最安終値・営業日を表示 -->
       <div class="stock-details">
-        <div class="detail-row"><span>始値</span><span id="valOpen">6,210</span></div>
-        <div class="detail-row"><span class="highlight-high">高値</span><span class="highlight-high" id="valHigh">6,350</span></div>
-        <div class="detail-row"><span>安値</span><span id="valLow">6,180</span></div>
-        <div class="detail-row"><span>出来高</span><span id="valVolume">12,459,300</span></div>
+        <div class="detail-row"><span>前日終値</span><span id="valOpen">6,210</span></div>
+        <div class="detail-row"><span class="highlight-high">最高終値</span><span class="highlight-high" id="valHigh">6,350</span></div>
+        <div class="detail-row"><span>最安終値</span><span id="valLow">6,180</span></div>
+        <div class="detail-row"><span>営業日</span><span id="valVolume">-</span></div>
       </div>
     </div>
 
@@ -53,7 +54,7 @@
     <!-- 液晶下部：日経平均・銘柄チッカー -->
     <div class="stock-ticker-bar">
       <span>日経平均 <span class="minus">63,290.11 ▼-1,369.36</span></span>
-      <span>キオクシア 285A <span class="plus">6,329 ▲+63</span></span>
+      <span>キオクシア 285A <span class="plus" id="ticker285A">6,329 ▲+63</span></span>
       <span>SNDK <span class="minus">51,770.31 ▼-572.25</span></span>
     </div>
   </div>

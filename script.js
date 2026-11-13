@@ -8,6 +8,12 @@ document.addEventListener("DOMContentLoaded", () => {
     { date: "2025/02/14", p285A: "6,329", diff285A: "▲ +139 (+2.24%)", open: "6,210", high: "6,350", low: "6,180", vol: "12,459,300", type: "surge" }
   ];
 
+  // --- 実株価履歴（data/285A_daily_close.json） ---
+  // 読み込めた場合はこちらが正（終値のみ・分割調整後）。JSONは日次終値しか持たないため、
+  // 始値・出来高のような当日データは表示しない。読めない環境（file://直開き等）では
+  // 上の STOCK_DATA_HISTORY（サンプル表示）にフォールバックする。
+  let priceHistory = null;
+
   const IR_EVENTS = [
     { title: "好決算発表！", sub: "純利益が市場予想を大幅上回り！", type: "good" },
     { title: "材料出尽くし...", sub: "好決算発表も寄り付きから大暴落", type: "bad" },
@@ -28,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     stoppedReels: [false, false, false],
     reelResults: [0, 0, 0],
     stockIndex: 3,
+    lastChangePct: 0,
     pendingFlag: null,
     spinInterval: null
   };
@@ -40,6 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const elIrTicker = document.getElementById("irTicker");
 
   const elPrice285A = document.getElementById("price285A");
+  const elDate = document.getElementById("valDate");
+  const elTicker285A = document.getElementById("ticker285A");
   const elDiff285A = document.getElementById("diff285A");
   const elOpen = document.getElementById("valOpen");
   const elHigh = document.getElementById("valHigh");
@@ -57,15 +66,74 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("btnStop3")
   ];
 
+  function fmtPrice(n) {
+    return n.toLocaleString("ja-JP", { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+  }
+
   // 株価ダッシュボード更新（エラー回避の安全設計）
+  // 実データ連携時: 1ゲーム = 1営業日。state.stockIndex が対象営業日を指す。
   function updateStockBoard() {
+    if (priceHistory) {
+      const i = state.stockIndex;
+      const cur = priceHistory[i];
+      if (!cur) return;
+      const prev = i > 0 ? priceHistory[i - 1] : null;
+
+      let high = -Infinity, low = Infinity;
+      for (let k = 0; k <= i; k++) {
+        if (priceHistory[k].close > high) high = priceHistory[k].close;
+        if (priceHistory[k].close < low) low = priceHistory[k].close;
+      }
+
+      if (elDate) elDate.textContent = cur.date.replace(/-/g, "/");
+      if (elPrice285A) elPrice285A.textContent = fmtPrice(cur.close);
+
+      if (prev) {
+        const diff = cur.close - prev.close;
+        const pct = (diff / prev.close) * 100;
+        const arrow = diff >= 0 ? "▲" : "▼";
+        const sign = diff >= 0 ? "+" : "-";
+        const diffText = `${arrow} ${sign}${fmtPrice(Math.abs(diff))} (${sign}${Math.abs(pct).toFixed(2)}%)`;
+        if (elDiff285A) {
+          elDiff285A.textContent = diffText;
+          elDiff285A.className = `stock-diff ${diff >= 0 ? 'plus' : 'minus'}`;
+        }
+        if (elTicker285A) {
+          elTicker285A.textContent = `${fmtPrice(cur.close)} ${arrow}${sign}${fmtPrice(Math.abs(diff))}`;
+          elTicker285A.className = diff >= 0 ? 'plus' : 'minus';
+        }
+        state.lastChangePct = pct;
+      } else {
+        if (elDiff285A) {
+          elDiff285A.textContent = "— （上場日）";
+          elDiff285A.className = "stock-diff plus";
+        }
+        if (elTicker285A) {
+          elTicker285A.textContent = `${fmtPrice(cur.close)} （上場日）`;
+          elTicker285A.className = 'plus';
+        }
+        state.lastChangePct = 0;
+      }
+
+      if (elOpen) elOpen.textContent = prev ? fmtPrice(prev.close) : "—";
+      if (elHigh) elHigh.textContent = fmtPrice(high);
+      if (elLow) elLow.textContent = fmtPrice(low);
+      if (elVolume) elVolume.textContent = `${i + 1} / ${priceHistory.length}`;
+      return;
+    }
+
     const data = STOCK_DATA_HISTORY[state.stockIndex];
     if (!data) return;
 
+    if (elDate) elDate.textContent = data.date;
     if (elPrice285A) elPrice285A.textContent = data.p285A;
     if (elDiff285A) {
       elDiff285A.textContent = data.diff285A;
       elDiff285A.className = `stock-diff ${data.diff285A.includes('▲') ? 'plus' : 'minus'}`;
+    }
+    if (elTicker285A) {
+      elTicker285A.textContent = `${data.p285A} ${data.diff285A.split(' ')[0]}${data.diff285A.split(' ')[1] || ''}`;
+      elTicker285A.className = data.diff285A.includes('▲') ? 'plus' : 'minus';
     }
     if (elOpen) elOpen.textContent = data.open;
     if (elHigh) elHigh.textContent = data.high;
@@ -108,7 +176,9 @@ document.addEventListener("DOMContentLoaded", () => {
       state.payout = 0;
       state.totalG++;
 
-      state.stockIndex = (state.stockIndex + 1) % STOCK_DATA_HISTORY.length;
+      // 1ゲームで1営業日進む。最終営業日の次は上場日へ巻き戻す（デモ仕様）。
+      const stockLen = priceHistory ? priceHistory.length : STOCK_DATA_HISTORY.length;
+      state.stockIndex = (state.stockIndex + 1) % stockLen;
       updateStockBoard();
 
       const flag = lottery();
@@ -290,9 +360,26 @@ document.addEventListener("DOMContentLoaded", () => {
   if (btnAdd) btnAdd.addEventListener("click", () => { state.credit += 1000; updateUI(); });
 
   const btnRst = document.getElementById("btnReset");
-  if (btnRst) btnRst.addEventListener("click", () => { state.credit = 1000; state.totalG = 0; state.mode = "NORMAL"; state.atNav = 0; updateUI(); });
+  if (btnRst) btnRst.addEventListener("click", () => { state.credit = 1000; state.totalG = 0; state.mode = "NORMAL"; state.atNav = 0; state.stockIndex = priceHistory ? 0 : 3; updateStockBoard(); updateUI(); });
+
+  // 実株価JSONの読み込み。成功したら上場日（先頭）から表示する。
+  // file://直開き等で fetch が失敗した場合はサンプル表示のまま動く。
+  async function loadPriceHistory() {
+    try {
+      const res = await fetch("data/285A_daily_close.json");
+      if (!res.ok) return;
+      const json = await res.json();
+      if (!json || !Array.isArray(json.prices) || json.prices.length === 0) return;
+      priceHistory = json.prices;
+      state.stockIndex = 0;
+      updateStockBoard();
+    } catch (e) {
+      // フォールバック: サンプル表示を維持
+    }
+  }
 
   // 初期化実行
   updateStockBoard();
   updateUI();
+  loadPriceHistory();
 });
