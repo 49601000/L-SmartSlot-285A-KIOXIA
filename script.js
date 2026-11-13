@@ -14,6 +14,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // 上の STOCK_DATA_HISTORY（サンプル表示）にフォールバックする。
   let priceHistory = null;
 
+  // --- 掲示板データ（data/board/、scripts/normalize_board_data.py で生成） ---
+  // 営業日キーで index.json が引け、その日のファイルに実在の投稿が入っている。
+  // 投稿は原文のまま・時系列順にローテーション表示する（後知恵で改変しない）。
+  let boardIndex = null;
+  const boardCache = {};
+  let boardPosts = null;
+  let boardCursor = 0;
+  let boardTimer = null;
+  let boardDay = null;
+
   const IR_EVENTS = [
     { title: "好決算発表！", sub: "純利益が市場予想を大幅上回り！", type: "good" },
     { title: "材料出尽くし...", sub: "好決算発表も寄り付きから大暴落", type: "bad" },
@@ -54,6 +64,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const elHigh = document.getElementById("valHigh");
   const elLow = document.getElementById("valLow");
   const elVolume = document.getElementById("valVolume");
+
+  const elBoardBar = document.getElementById("boardBar");
+  const elBoardLabel = document.getElementById("boardLabel");
+  const elBoardPost = document.getElementById("boardPost");
 
   const elScreenEffect = document.getElementById("screenEffect");
   const elEffectTitle = document.getElementById("effectTitle");
@@ -119,6 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (elHigh) elHigh.textContent = fmtPrice(high);
       if (elLow) elLow.textContent = fmtPrice(low);
       if (elVolume) elVolume.textContent = `${i + 1} / ${priceHistory.length}`;
+      syncBoardToDay(cur.date);
       return;
     }
 
@@ -362,6 +377,76 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnRst = document.getElementById("btnReset");
   if (btnRst) btnRst.addEventListener("click", () => { state.credit = 1000; state.totalG = 0; state.mode = "NORMAL"; state.atNav = 0; state.stockIndex = priceHistory ? 0 : 3; updateStockBoard(); updateUI(); });
 
+  // 掲示板ローテーション
+  function formatBoardPost(p) {
+    const txt = p.text.replace(/\s*\n\s*/g, " ").slice(0, 110);
+    const datePart = p.date !== boardDay ? `${p.date.slice(5).replace("-", "/")} ` : "";
+    return `${datePart}${p.time} No.${p.number} ${txt}`;
+  }
+
+  function showBoardPost() {
+    if (!elBoardPost || !boardPosts || boardPosts.length === 0) return;
+    const p = boardPosts[boardCursor % boardPosts.length];
+    boardCursor++;
+    elBoardPost.textContent = formatBoardPost(p);
+  }
+
+  function stopBoardRotation() {
+    if (boardTimer) { clearInterval(boardTimer); boardTimer = null; }
+  }
+
+  async function syncBoardToDay(dateStr) {
+    if (dateStr === boardDay) return;
+    if (!boardIndex) return; // index読み込み後に loadBoardIndex 側から再同期する
+    boardDay = dateStr;
+    stopBoardRotation();
+    boardPosts = null;
+    boardCursor = 0;
+    if (!elBoardPost) return;
+
+    const entry = boardIndex && boardIndex.days ? boardIndex.days[dateStr] : null;
+    if (!entry) {
+      if (elBoardLabel) elBoardLabel.textContent = "掲示板";
+      elBoardPost.textContent = "この日の掲示板データはありません";
+      if (elBoardBar) elBoardBar.classList.add("board-empty");
+      return;
+    }
+    if (elBoardBar) elBoardBar.classList.remove("board-empty");
+    if (elBoardLabel) elBoardLabel.textContent = `掲示板 ${entry.count}件`;
+    elBoardPost.textContent = "読み込み中...";
+
+    if (!boardCache[dateStr]) {
+      try {
+        const res = await fetch(`data/board/${entry.file}`);
+        if (!res.ok) throw new Error("board fetch failed");
+        const json = await res.json();
+        boardCache[dateStr] = json.posts || [];
+      } catch (e) {
+        boardCache[dateStr] = [];
+      }
+    }
+    if (boardDay !== dateStr) return; // 読み込み中に日付が変わった場合は破棄
+    boardPosts = boardCache[dateStr];
+    if (!boardPosts || boardPosts.length === 0) {
+      elBoardPost.textContent = "掲示板データの読み込みに失敗しました";
+      return;
+    }
+    boardCursor = Math.floor(Math.random() * boardPosts.length);
+    showBoardPost();
+    boardTimer = setInterval(showBoardPost, 4000);
+  }
+
+  async function loadBoardIndex() {
+    try {
+      const res = await fetch("data/board/index.json");
+      if (!res.ok) return;
+      boardIndex = await res.json();
+      if (priceHistory) syncBoardToDay(priceHistory[state.stockIndex].date);
+    } catch (e) {
+      // 掲示板なしでもゲームは動作する
+    }
+  }
+
   // 実株価JSONの読み込み。成功したら上場日（先頭）から表示する。
   // file://直開き等で fetch が失敗した場合はサンプル表示のまま動く。
   async function loadPriceHistory() {
@@ -382,4 +467,5 @@ document.addEventListener("DOMContentLoaded", () => {
   updateStockBoard();
   updateUI();
   loadPriceHistory();
+  loadBoardIndex();
 });

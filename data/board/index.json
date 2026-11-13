@@ -1,0 +1,113 @@
+{
+ "ticker": "285A.T",
+ "generated_from": [
+  "kioxia_board_20260611_clean.json",
+  "kioxia_board_20260622_clean.json",
+  "kioxia_board_20260623_clean.json",
+  "kioxia_board_20260627_clean.json",
+  "kioxia_board_20260709_clean.json",
+  "kioxia_board_clean.json"
+ ],
+ "total_posts": 19727,
+ "days": {
+  "2024-12-18": {
+   "file": "2024-12-18.json",
+   "count": 727,
+   "source_dates": {
+    "2024-11-25": 24,
+    "2024-11-26": 8,
+    "2024-11-27": 11,
+    "2024-11-28": 8,
+    "2024-11-29": 4,
+    "2024-11-30": 2,
+    "2024-12-01": 5,
+    "2024-12-02": 30,
+    "2024-12-03": 49,
+    "2024-12-04": 30,
+    "2024-12-05": 24,
+    "2024-12-06": 25,
+    "2024-12-07": 7,
+    "2024-12-08": 13,
+    "2024-12-09": 221,
+    "2024-12-10": 175,
+    "2024-12-11": 91
+   },
+   "threads": [
+    "kioxia_board_clean"
+   ]
+  },
+  "2026-06-11": {
+   "file": "2026-06-11.json",
+   "count": 2532,
+   "source_dates": {
+    "2026-06-11": 2532
+   },
+   "threads": [
+    "kioxia_board_20260611_clean"
+   ]
+  },
+  "2026-06-12": {
+   "file": "2026-06-12.json",
+   "count": 404,
+   "source_dates": {
+    "2026-06-12": 404
+   },
+   "threads": [
+    "kioxia_board_20260611_clean"
+   ]
+  },
+  "2026-06-22": {
+   "file": "2026-06-22.json",
+   "count": 5899,
+   "source_dates": {
+    "2026-06-22": 5899
+   },
+   "threads": [
+    "kioxia_board_20260622_clean"
+   ]
+  },
+  "2026-06-23": {
+   "file": "2026-06-23.json",
+   "count": 3446,
+   "source_dates": {
+    "2026-06-23": 3446
+   },
+   "threads": [
+    "kioxia_board_20260622_clean",
+    "kioxia_board_20260623_clean"
+   ]
+  },
+  "2026-06-29": {
+   "file": "2026-06-29.json",
+   "count": 4319,
+   "source_dates": {
+    "2026-06-27": 4035,
+    "2026-06-28": 284
+   },
+   "threads": [
+    "kioxia_board_20260627_clean"
+   ]
+  },
+  "2026-07-09": {
+   "file": "2026-07-09.json",
+   "count": 1780,
+   "source_dates": {
+    "2026-07-09": 1780
+   },
+   "threads": [
+    "kioxia_board_20260709_clean"
+   ]
+  },
+  "2026-07-10": {
+   "file": "2026-07-10.json",
+   "count": 620,
+   "source_dates": {
+    "2026-07-10": 620
+   },
+   "threads": [
+    "kioxia_board_20260709_clean"
+   ]
+  }
+ },
+ "notes": "Posts are grouped by the trading day on which the game shows them. Weekend/holiday posts are carried to the next trading day and pre-IPO posts to the first trading day; each post keeps its real date/time. Coverage is partial: only the source threads' date ranges and time windows are included."
+}

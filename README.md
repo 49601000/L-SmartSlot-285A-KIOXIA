@@ -8,7 +8,9 @@
 - `style.css`：ネオン筐体デザイン
 - `script.js`：ゲーム内抽選、リール、CZ、AT、デバッグ操作
 - `data/285A_daily_close.json`：285A.Tの日次終値（2024-12-18から、yfinance取得）
+- `data/board/`：Yahoo!ファイナンス掲示板の投稿（営業日別JSON＋`index.json`）。対応する8営業日では、液晶下部の掲示板バーに当時の投稿が表示される
 - `scripts/fetch_285a_closes.py`：終値JSONの取得・更新スクリプト
+- `scripts/normalize_board_data.py`：掲示板整形JSON（旧スキーマ混在）を `data/board/` 形式へ正規化するスクリプト
 
 ## 使い方
 

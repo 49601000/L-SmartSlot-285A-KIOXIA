@@ -194,6 +194,36 @@ body {
 .stock-ticker-bar .plus { color: #ff3333; }
 .stock-ticker-bar .minus { color: #00e676; }
 
+/* 掲示板バー */
+.board-bar {
+  margin-top: 3px;
+  font-size: 9px;
+  background: #101010;
+  padding: 3px 6px;
+  border-radius: 4px;
+  display: flex;
+  gap: 6px;
+  align-items: baseline;
+  color: #ccc;
+}
+
+.board-label {
+  color: #ffd54f;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.board-post {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.board-bar.board-empty {
+  color: #666;
+}
+
 /* リール＆BUY/SELLサイドランプ */
 .reel-section {
   display: flex;
