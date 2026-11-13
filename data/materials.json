@@ -1,6 +1,6 @@
 {
  "ticker": "285A.T",
- "note": "素材レジストリ。presentation が表示エンジンを決める（text_scroll=エンジンA / original_image=エンジンB）。IR分は2026-11-14に公式IRニュース一覧ページから日付・カテゴリ・タイトルを転記したメタデータ。パイロット7件は公式PDF（eir-parts / TDnet）を取得しページ画像化済み（status=stored_image、JPEG 150dpi、原本無加工）。残り71件は status=metadata_only（画像未取得）。",
+ "note": "素材レジストリ。presentation が表示エンジンを決める（text_scroll=エンジンA / original_image=エンジンB）。IR分は2026-11-14に公式IRニュース一覧ページから日付・カテゴリ・タイトルを転記したメタデータ。パイロット7件は公式PDF（eir-parts / TDnet）を取得しページ画像化済み（status=stored_image）。画像は JPEG 150dpi・原本無加工が正本で、GitHubへはテキストとして送れるよう同一JPEGを base64 で埋め込んだ SVG ラッパー（image_format=svg-wrapped-jpeg、images は .svg を指す）として格納する。埋め込みJPEGはバイト単位で原本と同一。残り71件は status=metadata_only（画像未取得）。",
  "materials": [
   {
    "id": "MAT-NEWS-20260709-BAIN",
@@ -50,11 +50,12 @@
    "source": "キオクシアホールディングス公式IRニュース",
    "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
    "images": [
-    "materials/ir/MAT-IR-20241218-1/page-01.jpg"
+    "materials/ir/MAT-IR-20241218-1/page-01.svg"
    ],
    "status": "stored_image",
    "pdf_url": "https://ssl4.eir-parts.net/doc/285A/tdnet/2541143/00.pdf",
-   "pages": 1
+   "pages": 1,
+   "image_format": "svg-wrapped-jpeg"
   },
   {
    "id": "MAT-IR-20241218-2",
@@ -847,12 +848,13 @@
    "source": "キオクシアホールディングス公式IRニュース",
    "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
    "images": [
-    "materials/ir/MAT-IR-20260731-1/page-01.jpg",
-    "materials/ir/MAT-IR-20260731-1/page-02.jpg"
+    "materials/ir/MAT-IR-20260731-1/page-01.svg",
+    "materials/ir/MAT-IR-20260731-1/page-02.svg"
    ],
    "status": "stored_image",
    "pdf_url": "https://ssl4.eir-parts.net/doc/285A/tdnet/2859909/00.pdf",
-   "pages": 2
+   "pages": 2,
+   "image_format": "svg-wrapped-jpeg"
   },
   {
    "id": "MAT-IR-20260731-2",
@@ -891,28 +893,29 @@
    "source": "キオクシアホールディングス公式IRニュース",
    "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
    "images": [
-    "materials/ir/MAT-IR-20260731-4/page-01.jpg",
-    "materials/ir/MAT-IR-20260731-4/page-02.jpg",
-    "materials/ir/MAT-IR-20260731-4/page-03.jpg",
-    "materials/ir/MAT-IR-20260731-4/page-04.jpg",
-    "materials/ir/MAT-IR-20260731-4/page-05.jpg",
-    "materials/ir/MAT-IR-20260731-4/page-06.jpg",
-    "materials/ir/MAT-IR-20260731-4/page-07.jpg",
-    "materials/ir/MAT-IR-20260731-4/page-08.jpg",
-    "materials/ir/MAT-IR-20260731-4/page-09.jpg",
-    "materials/ir/MAT-IR-20260731-4/page-10.jpg",
-    "materials/ir/MAT-IR-20260731-4/page-11.jpg",
-    "materials/ir/MAT-IR-20260731-4/page-12.jpg",
-    "materials/ir/MAT-IR-20260731-4/page-13.jpg",
-    "materials/ir/MAT-IR-20260731-4/page-14.jpg",
-    "materials/ir/MAT-IR-20260731-4/page-15.jpg",
-    "materials/ir/MAT-IR-20260731-4/page-16.jpg",
-    "materials/ir/MAT-IR-20260731-4/page-17.jpg",
-    "materials/ir/MAT-IR-20260731-4/page-18.jpg"
+    "materials/ir/MAT-IR-20260731-4/page-01.svg",
+    "materials/ir/MAT-IR-20260731-4/page-02.svg",
+    "materials/ir/MAT-IR-20260731-4/page-03.svg",
+    "materials/ir/MAT-IR-20260731-4/page-04.svg",
+    "materials/ir/MAT-IR-20260731-4/page-05.svg",
+    "materials/ir/MAT-IR-20260731-4/page-06.svg",
+    "materials/ir/MAT-IR-20260731-4/page-07.svg",
+    "materials/ir/MAT-IR-20260731-4/page-08.svg",
+    "materials/ir/MAT-IR-20260731-4/page-09.svg",
+    "materials/ir/MAT-IR-20260731-4/page-10.svg",
+    "materials/ir/MAT-IR-20260731-4/page-11.svg",
+    "materials/ir/MAT-IR-20260731-4/page-12.svg",
+    "materials/ir/MAT-IR-20260731-4/page-13.svg",
+    "materials/ir/MAT-IR-20260731-4/page-14.svg",
+    "materials/ir/MAT-IR-20260731-4/page-15.svg",
+    "materials/ir/MAT-IR-20260731-4/page-16.svg",
+    "materials/ir/MAT-IR-20260731-4/page-17.svg",
+    "materials/ir/MAT-IR-20260731-4/page-18.svg"
    ],
    "status": "stored_image",
    "pdf_url": "https://ssl4.eir-parts.net/doc/285A/tdnet/2859905/00.pdf",
-   "pages": 18
+   "pages": 18,
+   "image_format": "svg-wrapped-jpeg"
   },
   {
    "id": "MAT-IR-20260803-1",
@@ -938,12 +941,13 @@
    "source": "キオクシアホールディングス公式IRニュース",
    "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
    "images": [
-    "materials/ir/MAT-IR-20260810-1/page-01.jpg",
-    "materials/ir/MAT-IR-20260810-1/page-02.jpg"
+    "materials/ir/MAT-IR-20260810-1/page-01.svg",
+    "materials/ir/MAT-IR-20260810-1/page-02.svg"
    ],
    "status": "stored_image",
    "pdf_url": "https://ssl4.eir-parts.net/doc/285A/tdnet/2870704/00.pdf",
-   "pages": 2
+   "pages": 2,
+   "image_format": "svg-wrapped-jpeg"
   },
   {
    "id": "MAT-IR-20260810-2",
@@ -982,12 +986,13 @@
    "source": "キオクシアホールディングス公式IRニュース",
    "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
    "images": [
-    "materials/ir/MAT-IR-20260827-1/page-01.jpg",
-    "materials/ir/MAT-IR-20260827-1/page-02.jpg"
+    "materials/ir/MAT-IR-20260827-1/page-01.svg",
+    "materials/ir/MAT-IR-20260827-1/page-02.svg"
    ],
    "status": "stored_image",
    "pdf_url": "https://ssl4.eir-parts.net/doc/285A/tdnet/2878649/00.pdf",
-   "pages": 2
+   "pages": 2,
+   "image_format": "svg-wrapped-jpeg"
   },
   {
    "id": "MAT-IR-20260827-2",
@@ -1065,11 +1070,12 @@
    "source": "キオクシアホールディングス公式IRニュース",
    "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
    "images": [
-    "materials/ir/MAT-IR-20261030-1/page-01.jpg"
+    "materials/ir/MAT-IR-20261030-1/page-01.svg"
    ],
    "status": "stored_image",
    "pdf_url": "https://ssl4.eir-parts.net/doc/285A/tdnet/2902681/00.pdf",
-   "pages": 1
+   "pages": 1,
+   "image_format": "svg-wrapped-jpeg"
   },
   {
    "id": "MAT-IR-20261030-2",
@@ -1095,28 +1101,29 @@
    "source": "キオクシアホールディングス公式IRニュース",
    "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
    "images": [
-    "materials/ir/MAT-IR-20261030-3/page-01.jpg",
-    "materials/ir/MAT-IR-20261030-3/page-02.jpg",
-    "materials/ir/MAT-IR-20261030-3/page-03.jpg",
-    "materials/ir/MAT-IR-20261030-3/page-04.jpg",
-    "materials/ir/MAT-IR-20261030-3/page-05.jpg",
-    "materials/ir/MAT-IR-20261030-3/page-06.jpg",
-    "materials/ir/MAT-IR-20261030-3/page-07.jpg",
-    "materials/ir/MAT-IR-20261030-3/page-08.jpg",
-    "materials/ir/MAT-IR-20261030-3/page-09.jpg",
-    "materials/ir/MAT-IR-20261030-3/page-10.jpg",
-    "materials/ir/MAT-IR-20261030-3/page-11.jpg",
-    "materials/ir/MAT-IR-20261030-3/page-12.jpg",
-    "materials/ir/MAT-IR-20261030-3/page-13.jpg",
-    "materials/ir/MAT-IR-20261030-3/page-14.jpg",
-    "materials/ir/MAT-IR-20261030-3/page-15.jpg",
-    "materials/ir/MAT-IR-20261030-3/page-16.jpg",
-    "materials/ir/MAT-IR-20261030-3/page-17.jpg",
-    "materials/ir/MAT-IR-20261030-3/page-18.jpg"
+    "materials/ir/MAT-IR-20261030-3/page-01.svg",
+    "materials/ir/MAT-IR-20261030-3/page-02.svg",
+    "materials/ir/MAT-IR-20261030-3/page-03.svg",
+    "materials/ir/MAT-IR-20261030-3/page-04.svg",
+    "materials/ir/MAT-IR-20261030-3/page-05.svg",
+    "materials/ir/MAT-IR-20261030-3/page-06.svg",
+    "materials/ir/MAT-IR-20261030-3/page-07.svg",
+    "materials/ir/MAT-IR-20261030-3/page-08.svg",
+    "materials/ir/MAT-IR-20261030-3/page-09.svg",
+    "materials/ir/MAT-IR-20261030-3/page-10.svg",
+    "materials/ir/MAT-IR-20261030-3/page-11.svg",
+    "materials/ir/MAT-IR-20261030-3/page-12.svg",
+    "materials/ir/MAT-IR-20261030-3/page-13.svg",
+    "materials/ir/MAT-IR-20261030-3/page-14.svg",
+    "materials/ir/MAT-IR-20261030-3/page-15.svg",
+    "materials/ir/MAT-IR-20261030-3/page-16.svg",
+    "materials/ir/MAT-IR-20261030-3/page-17.svg",
+    "materials/ir/MAT-IR-20261030-3/page-18.svg"
    ],
    "status": "stored_image",
    "pdf_url": "https://ssl4.eir-parts.net/doc/285A/tdnet/2902676/00.pdf",
-   "pages": 18
+   "pages": 18,
+   "image_format": "svg-wrapped-jpeg"
   }
  ]
 }
