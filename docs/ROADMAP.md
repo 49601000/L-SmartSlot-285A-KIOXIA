@@ -12,6 +12,7 @@ Current status: Static slot demo; close JSON linked (1 game = 1 trading day) and
 - 2026-11-01: `docs/EVENT_CANDIDATES.md` に17件の史実・報道イベント候補を出典・検証状態付きで整理。ゲーム連携は未実装。
 - 2026-11-14: 株価JSON連携を実装。起動時に終値JSONを読み込み、上場日から1ゲーム=1営業日で進行。前日比・最高／最安終値・営業日進捗を表示。fetch不可の環境ではサンプル表示にフォールバック。
 - 2026-11-14: 掲示板の日付同期表示を実装。正規化スクリプト `scripts/normalize_board_data.py` で素材19,727件（3種スキーマ）を統一し、`data/board/` に営業日別JSON＋indexを生成。対応8営業日では液晶下部の掲示板バーに当時の投稿がローテーション表示される。
+- 2026-11-14: 演出仕様を2系統に固定（`docs/PRESENTATION_SPEC.md`）。A=ニュース／SNS／掲示板の全文テキストスクロール、B=公式IRの原本画像表示。素材レジストリ `data/materials.json` を新設し81件を登録（IR 78件は公式IR一覧から転記したメタデータ、画像は未取得）。
 
 ## Current position
 
@@ -22,6 +23,7 @@ Current status: Static slot demo; close JSON linked (1 game = 1 trading day) and
 
 ## Possible next task (not yet approved)
 
+- 演出エンジンA（テキストスクロール）の実装。発火条件・速度・中断可否は PRESENTATION_SPEC の未確定事項を決めてから。
+- 演出エンジンB用に、IRの公式PDFを取得してページ画像化するパイプライン（対象素材の選定を含む）。
 - `docs/EVENT_CANDIDATES.md` の要確認事項を解消し、採用イベントと演出内容を決める。
 - 株価の大幅変動日に連動した背景・演出の強化。
-- 掲示板バーでの投稿表示の演出強化（暴落日の赤色化、スクロール表示など）。

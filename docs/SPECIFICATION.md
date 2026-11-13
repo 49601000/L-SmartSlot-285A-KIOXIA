@@ -22,6 +22,16 @@ Status: Initial demo implemented; historical close JSON imported (2026-11-01) an
 - fetchが失敗する環境（`file://` 直開き等）では、従来の組み込みサンプル株価配列（2025/02/10〜02/14の4件）で表示し、ゲーム自体は動作する。連携を確認するにはHTTP経由（GitHub Pages、またはローカルサーバー）で開くこと。
 - リセットボタンは実データ連携時には上場日表示へ戻す。
 
+## Presentation engines and material registry (2026-11-14, owner-approved design)
+
+演出は2系統に固定する。詳細は `docs/PRESENTATION_SPEC.md`。
+
+- **エンジンA（text_scroll）**: ニュース・SNS・掲示板。原文テキストを液晶内で下から上へ全文スクロール表示する。
+- **エンジンB（original_image）**: 公式IR・決算資料。PDFページを画像化し、原本の紙面そのままを液晶に表示する（ゆっくり拡大・移動、ページ切替）。IR本文はテキストスクロールしない。
+- 素材と演出の意味は分離する。各素材はイベントID・発生日・出典・演出タイプを持ち、素材台帳は `data/materials.json`（現在81件: テキスト素材2＋掲示板コレクション1＋IR 78件）。
+- IR 78件は公式IRニュース一覧から転記したメタデータ（日付・カテゴリ・公式タイトル）で、ページ画像は未取得（status=metadata_only）。対象期間は価格データと同じ2024-12-18〜2026-10-30、50日に分布し、うち15件がEVT台帳と対応する。
+- 両エンジンとも未実装。現在の掲示板バー表示はエンジンAの暫定表示、ランダムIR表示は仮演出。
+
 ## Board posts linked by trading day (2026-11-14)
 
 - 素材: Yahoo!ファイナンス 285A掲示板の手作業取得テキストを整形したJSON 6ファイル（Drive「スマスロキオクシア」フォルダ保管）、合計19,727件。
