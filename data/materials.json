@@ -1,6 +1,6 @@
 {
  "ticker": "285A.T",
- "note": "素材レジストリ。presentation が表示エンジンを決める（text_scroll=エンジンA / original_image=エンジンB）。IR分は2026-11-14に公式IRニュース一覧ページから日付・カテゴリ・タイトルを転記したメタデータで、ページ画像は未取得（status=metadata_only）。",
+ "note": "素材レジストリ。presentation が表示エンジンを決める（text_scroll=エンジンA / original_image=エンジンB）。IR分は2026-11-14に公式IRニュース一覧ページから日付・カテゴリ・タイトルを転記したメタデータ。パイロット7件は公式PDF（eir-parts / TDnet）を取得しページ画像化済み（status=stored_image、JPEG 150dpi、原本無加工）。残り71件は status=metadata_only（画像未取得）。",
  "materials": [
   {
    "id": "MAT-NEWS-20260709-BAIN",
@@ -49,8 +49,12 @@
    "title": "東京証券取引所プライム市場への上場のお知らせ",
    "source": "キオクシアホールディングス公式IRニュース",
    "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
-   "images": [],
-   "status": "metadata_only"
+   "images": [
+    "materials/ir/MAT-IR-20241218-1/page-01.jpg"
+   ],
+   "status": "stored_image",
+   "pdf_url": "https://ssl4.eir-parts.net/doc/285A/tdnet/2541143/00.pdf",
+   "pages": 1
   },
   {
    "id": "MAT-IR-20241218-2",
@@ -842,8 +846,13 @@
    "title": "株式分割及び株式分割に伴う定款の一部変更に関するお知らせ",
    "source": "キオクシアホールディングス公式IRニュース",
    "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
-   "images": [],
-   "status": "metadata_only"
+   "images": [
+    "materials/ir/MAT-IR-20260731-1/page-01.jpg",
+    "materials/ir/MAT-IR-20260731-1/page-02.jpg"
+   ],
+   "status": "stored_image",
+   "pdf_url": "https://ssl4.eir-parts.net/doc/285A/tdnet/2859909/00.pdf",
+   "pages": 2
   },
   {
    "id": "MAT-IR-20260731-2",
@@ -881,8 +890,29 @@
    "title": "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）",
    "source": "キオクシアホールディングス公式IRニュース",
    "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
-   "images": [],
-   "status": "metadata_only"
+   "images": [
+    "materials/ir/MAT-IR-20260731-4/page-01.jpg",
+    "materials/ir/MAT-IR-20260731-4/page-02.jpg",
+    "materials/ir/MAT-IR-20260731-4/page-03.jpg",
+    "materials/ir/MAT-IR-20260731-4/page-04.jpg",
+    "materials/ir/MAT-IR-20260731-4/page-05.jpg",
+    "materials/ir/MAT-IR-20260731-4/page-06.jpg",
+    "materials/ir/MAT-IR-20260731-4/page-07.jpg",
+    "materials/ir/MAT-IR-20260731-4/page-08.jpg",
+    "materials/ir/MAT-IR-20260731-4/page-09.jpg",
+    "materials/ir/MAT-IR-20260731-4/page-10.jpg",
+    "materials/ir/MAT-IR-20260731-4/page-11.jpg",
+    "materials/ir/MAT-IR-20260731-4/page-12.jpg",
+    "materials/ir/MAT-IR-20260731-4/page-13.jpg",
+    "materials/ir/MAT-IR-20260731-4/page-14.jpg",
+    "materials/ir/MAT-IR-20260731-4/page-15.jpg",
+    "materials/ir/MAT-IR-20260731-4/page-16.jpg",
+    "materials/ir/MAT-IR-20260731-4/page-17.jpg",
+    "materials/ir/MAT-IR-20260731-4/page-18.jpg"
+   ],
+   "status": "stored_image",
+   "pdf_url": "https://ssl4.eir-parts.net/doc/285A/tdnet/2859905/00.pdf",
+   "pages": 18
   },
   {
    "id": "MAT-IR-20260803-1",
@@ -907,8 +937,13 @@
    "title": "主要株主である筆頭株主の異動に関するお知らせ",
    "source": "キオクシアホールディングス公式IRニュース",
    "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
-   "images": [],
-   "status": "metadata_only"
+   "images": [
+    "materials/ir/MAT-IR-20260810-1/page-01.jpg",
+    "materials/ir/MAT-IR-20260810-1/page-02.jpg"
+   ],
+   "status": "stored_image",
+   "pdf_url": "https://ssl4.eir-parts.net/doc/285A/tdnet/2870704/00.pdf",
+   "pages": 2
   },
   {
    "id": "MAT-IR-20260810-2",
@@ -946,8 +981,13 @@
    "title": "サンディスクコーポレーションとの投資計画に関するお知らせ",
    "source": "キオクシアホールディングス公式IRニュース",
    "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
-   "images": [],
-   "status": "metadata_only"
+   "images": [
+    "materials/ir/MAT-IR-20260827-1/page-01.jpg",
+    "materials/ir/MAT-IR-20260827-1/page-02.jpg"
+   ],
+   "status": "stored_image",
+   "pdf_url": "https://ssl4.eir-parts.net/doc/285A/tdnet/2878649/00.pdf",
+   "pages": 2
   },
   {
    "id": "MAT-IR-20260827-2",
@@ -1024,8 +1064,12 @@
    "title": "株主還元方針及び剰余金の配当（中間配当・初配）に関するお知らせ",
    "source": "キオクシアホールディングス公式IRニュース",
    "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
-   "images": [],
-   "status": "metadata_only"
+   "images": [
+    "materials/ir/MAT-IR-20261030-1/page-01.jpg"
+   ],
+   "status": "stored_image",
+   "pdf_url": "https://ssl4.eir-parts.net/doc/285A/tdnet/2902681/00.pdf",
+   "pages": 1
   },
   {
    "id": "MAT-IR-20261030-2",
@@ -1050,8 +1094,29 @@
    "title": "2027年３月期 第２四半期（中間期）決算短信〔ＩＦＲＳ〕（連結）",
    "source": "キオクシアホールディングス公式IRニュース",
    "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
-   "images": [],
-   "status": "metadata_only"
+   "images": [
+    "materials/ir/MAT-IR-20261030-3/page-01.jpg",
+    "materials/ir/MAT-IR-20261030-3/page-02.jpg",
+    "materials/ir/MAT-IR-20261030-3/page-03.jpg",
+    "materials/ir/MAT-IR-20261030-3/page-04.jpg",
+    "materials/ir/MAT-IR-20261030-3/page-05.jpg",
+    "materials/ir/MAT-IR-20261030-3/page-06.jpg",
+    "materials/ir/MAT-IR-20261030-3/page-07.jpg",
+    "materials/ir/MAT-IR-20261030-3/page-08.jpg",
+    "materials/ir/MAT-IR-20261030-3/page-09.jpg",
+    "materials/ir/MAT-IR-20261030-3/page-10.jpg",
+    "materials/ir/MAT-IR-20261030-3/page-11.jpg",
+    "materials/ir/MAT-IR-20261030-3/page-12.jpg",
+    "materials/ir/MAT-IR-20261030-3/page-13.jpg",
+    "materials/ir/MAT-IR-20261030-3/page-14.jpg",
+    "materials/ir/MAT-IR-20261030-3/page-15.jpg",
+    "materials/ir/MAT-IR-20261030-3/page-16.jpg",
+    "materials/ir/MAT-IR-20261030-3/page-17.jpg",
+    "materials/ir/MAT-IR-20261030-3/page-18.jpg"
+   ],
+   "status": "stored_image",
+   "pdf_url": "https://ssl4.eir-parts.net/doc/285A/tdnet/2902676/00.pdf",
+   "pages": 18
   }
  ]
 }

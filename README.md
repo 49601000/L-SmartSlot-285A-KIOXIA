@@ -10,6 +10,7 @@
 - `data/285A_daily_close.json`：285A.Tの日次終値（2024-12-18から、yfinance取得）
 - `data/board/`：Yahoo!ファイナンス掲示板の投稿（営業日別JSON＋`index.json`）。対応する8営業日では、液晶下部の掲示板バーに当時の投稿が表示される
 - `data/materials.json`：演出素材のレジストリ（ニュース／SNS／掲示板／IR）。演出の2系統仕様は [docs/PRESENTATION_SPEC.md](docs/PRESENTATION_SPEC.md)
+- `materials/ir/`：公式IRのページ画像（エンジンB用、原本無加工のJPEG）。パイロット7件・44ページ取得済み
 - `scripts/fetch_285a_closes.py`：終値JSONの取得・更新スクリプト
 - `scripts/normalize_board_data.py`：掲示板整形JSON（旧スキーマ混在）を `data/board/` 形式へ正規化するスクリプト
 
