@@ -17,6 +17,11 @@
         "next_day": "2024-12-19",
         "next_day_return_pct": 7.43,
         "grade": "mid"
+      },
+      "reaction": {
+        "pre5_pct": null,
+        "day0_pct": null,
+        "category": "素直な反応"
       }
     },
     {
@@ -32,6 +37,11 @@
         "next_day": "2025-01-17",
         "next_day_return_pct": 0.0,
         "grade": "low"
+      },
+      "reaction": {
+        "pre5_pct": -12.8,
+        "day0_pct": -3.1,
+        "category": "無風"
       }
     },
     {
@@ -51,6 +61,11 @@
         "next_day": "2025-02-17",
         "next_day_return_pct": 9.03,
         "grade": "mid"
+      },
+      "reaction": {
+        "pre5_pct": 9.7,
+        "day0_pct": -2.4,
+        "category": "悪材料出尽くし"
       }
     },
     {
@@ -66,6 +81,11 @@
         "next_day": "2025-04-15",
         "next_day_return_pct": -0.1,
         "grade": "low"
+      },
+      "reaction": {
+        "pre5_pct": 28.2,
+        "day0_pct": -1.8,
+        "category": "市場織り込み済み"
       }
     },
     {
@@ -85,6 +105,11 @@
         "next_day": "2025-05-16",
         "next_day_return_pct": 0.27,
         "grade": "low"
+      },
+      "reaction": {
+        "pre5_pct": 14.6,
+        "day0_pct": -2.4,
+        "category": "市場織り込み済み"
       }
     },
     {
@@ -102,6 +127,11 @@
         "next_day": "2025-05-27",
         "next_day_return_pct": -0.24,
         "grade": "low"
+      },
+      "reaction": {
+        "pre5_pct": -5.3,
+        "day0_pct": 0.9,
+        "category": "無風"
       }
     },
     {
@@ -117,6 +147,11 @@
         "next_day": "2025-06-03",
         "next_day_return_pct": -0.65,
         "grade": "low"
+      },
+      "reaction": {
+        "pre5_pct": -3.9,
+        "day0_pct": -5.0,
+        "category": "無風"
       }
     },
     {
@@ -132,6 +167,11 @@
         "next_day": "2025-06-06",
         "next_day_return_pct": 2.32,
         "grade": "low"
+      },
+      "reaction": {
+        "pre5_pct": -2.9,
+        "day0_pct": 2.7,
+        "category": "無風"
       }
     },
     {
@@ -147,6 +187,11 @@
         "next_day": "2025-06-24",
         "next_day_return_pct": -0.19,
         "grade": "low"
+      },
+      "reaction": {
+        "pre5_pct": 27.1,
+        "day0_pct": 11.8,
+        "category": "市場織り込み済み"
       }
     },
     {
@@ -162,6 +207,11 @@
         "next_day": "2025-06-27",
         "next_day_return_pct": -0.28,
         "grade": "low"
+      },
+      "reaction": {
+        "pre5_pct": 20.3,
+        "day0_pct": 0.0,
+        "category": "市場織り込み済み"
       }
     },
     {
@@ -179,6 +229,11 @@
         "next_day": "2025-06-30",
         "next_day_return_pct": -0.79,
         "grade": "low"
+      },
+      "reaction": {
+        "pre5_pct": 10.5,
+        "day0_pct": -0.3,
+        "category": "市場織り込み済み"
       }
     },
     {
@@ -194,6 +249,11 @@
         "next_day": "2025-07-03",
         "next_day_return_pct": 5.64,
         "grade": "mid"
+      },
+      "reaction": {
+        "pre5_pct": -4.7,
+        "day0_pct": 2.1,
+        "category": "素直な反応"
       }
     },
     {
@@ -209,6 +269,11 @@
         "next_day": "2025-07-08",
         "next_day_return_pct": 3.82,
         "grade": "low"
+      },
+      "reaction": {
+        "pre5_pct": -1.7,
+        "day0_pct": 3.4,
+        "category": "無風"
       }
     },
     {
@@ -224,6 +289,11 @@
         "next_day": "2025-07-15",
         "next_day_return_pct": 0.53,
         "grade": "low"
+      },
+      "reaction": {
+        "pre5_pct": -0.9,
+        "day0_pct": -2.0,
+        "category": "無風"
       }
     },
     {
@@ -239,6 +309,11 @@
         "next_day": "2025-07-18",
         "next_day_return_pct": -2.53,
         "grade": "low"
+      },
+      "reaction": {
+        "pre5_pct": -5.6,
+        "day0_pct": -1.5,
+        "category": "無風"
       }
     },
     {
@@ -256,6 +331,11 @@
         "next_day": "2025-07-28",
         "next_day_return_pct": -0.12,
         "grade": "low"
+      },
+      "reaction": {
+        "pre5_pct": 1.8,
+        "day0_pct": -4.2,
+        "category": "無風"
       }
     },
     {
@@ -271,6 +351,11 @@
         "next_day": "2025-08-12",
         "next_day_return_pct": 10.74,
         "grade": "high"
+      },
+      "reaction": {
+        "pre5_pct": -2.5,
+        "day0_pct": 2.8,
+        "category": "素直な反応"
       }
     },
     {
@@ -286,6 +371,11 @@
         "next_day": "2025-10-14",
         "next_day_return_pct": -2.6,
         "grade": "low"
+      },
+      "reaction": {
+        "pre5_pct": -0.3,
+        "day0_pct": -1.0,
+        "category": "無風"
       }
     },
     {
@@ -301,6 +391,11 @@
         "next_day": "2025-10-28",
         "next_day_return_pct": -4.38,
         "grade": "low"
+      },
+      "reaction": {
+        "pre5_pct": 37.2,
+        "day0_pct": 11.7,
+        "category": "市場織り込み済み"
       }
     },
     {
@@ -316,6 +411,11 @@
         "next_day": "2025-10-30",
         "next_day_return_pct": 8.13,
         "grade": "mid"
+      },
+      "reaction": {
+        "pre5_pct": 37.9,
+        "day0_pct": 7.5,
+        "category": "素直な反応"
       }
     },
     {
@@ -331,6 +431,11 @@
         "next_day": "2025-10-31",
         "next_day_return_pct": -0.69,
         "grade": "low"
+      },
+      "reaction": {
+        "pre5_pct": 47.9,
+        "day0_pct": 8.1,
+        "category": "市場織り込み済み"
       }
     },
     {
@@ -350,6 +455,11 @@
         "next_day": "2025-11-14",
         "next_day_return_pct": -23.03,
         "grade": "high"
+      },
+      "reaction": {
+        "pre5_pct": 13.3,
+        "day0_pct": -1.6,
+        "category": "素直な反応"
       }
     },
     {
@@ -365,6 +475,11 @@
         "next_day": "2025-12-05",
         "next_day_return_pct": 3.97,
         "grade": "low"
+      },
+      "reaction": {
+        "pre5_pct": 0.2,
+        "day0_pct": 0.7,
+        "category": "無風"
       }
     },
     {
@@ -380,6 +495,11 @@
         "next_day": "2026-01-13",
         "next_day_return_pct": 7.84,
         "grade": "mid"
+      },
+      "reaction": {
+        "pre5_pct": 21.6,
+        "day0_pct": -2.4,
+        "category": "悪材料出尽くし"
       }
     },
     {
@@ -395,6 +515,11 @@
         "next_day": "2026-01-30",
         "next_day_return_pct": 10.99,
         "grade": "high"
+      },
+      "reaction": {
+        "pre5_pct": 7.5,
+        "day0_pct": 1.6,
+        "category": "素直な反応"
       }
     },
     {
@@ -412,6 +537,11 @@
         "next_day": "2026-02-02",
         "next_day_return_pct": -14.04,
         "grade": "high"
+      },
+      "reaction": {
+        "pre5_pct": 23.2,
+        "day0_pct": 11.0,
+        "category": "素直な反応"
       }
     },
     {
@@ -427,6 +557,11 @@
         "next_day": "2026-02-13",
         "next_day_return_pct": 7.89,
         "grade": "mid"
+      },
+      "reaction": {
+        "pre5_pct": 1.3,
+        "day0_pct": 12.4,
+        "category": "素直な反応"
       }
     },
     {
@@ -442,6 +577,11 @@
         "next_day": "2026-02-27",
         "next_day_return_pct": -0.14,
         "grade": "low"
+      },
+      "reaction": {
+        "pre5_pct": -0.8,
+        "day0_pct": -1.0,
+        "category": "無風"
       }
     },
     {
@@ -459,6 +599,11 @@
         "next_day": "2026-03-02",
         "next_day_return_pct": 1.44,
         "grade": "low"
+      },
+      "reaction": {
+        "pre5_pct": -0.2,
+        "day0_pct": -0.1,
+        "category": "無風"
       }
     },
     {
@@ -474,6 +619,11 @@
         "next_day": "2026-03-06",
         "next_day_return_pct": -1.6,
         "grade": "low"
+      },
+      "reaction": {
+        "pre5_pct": -4.4,
+        "day0_pct": 5.5,
+        "category": "無風"
       }
     },
     {
@@ -491,6 +641,11 @@
         "next_day": "2026-03-26",
         "next_day_return_pct": -5.7,
         "grade": "mid"
+      },
+      "reaction": {
+        "pre5_pct": 3.9,
+        "day0_pct": 6.4,
+        "category": "素直な反応"
       }
     },
     {
@@ -506,6 +661,11 @@
         "next_day": "2026-03-27",
         "next_day_return_pct": -4.23,
         "grade": "low"
+      },
+      "reaction": {
+        "pre5_pct": -9.5,
+        "day0_pct": -5.7,
+        "category": "無風"
       }
     },
     {
@@ -521,6 +681,11 @@
         "next_day": "2026-04-13",
         "next_day_return_pct": 3.75,
         "grade": "low"
+      },
+      "reaction": {
+        "pre5_pct": 37.9,
+        "day0_pct": 8.8,
+        "category": "市場織り込み済み"
       }
     },
     {
@@ -548,6 +713,11 @@
         "next_day": "2026-05-18",
         "next_day_return_pct": 15.75,
         "grade": "high"
+      },
+      "reaction": {
+        "pre5_pct": -0.1,
+        "day0_pct": -8.3,
+        "category": "悪材料出尽くし"
       }
     },
     {
@@ -563,6 +733,11 @@
         "next_day": "2026-05-26",
         "next_day_return_pct": -4.57,
         "grade": "low"
+      },
+      "reaction": {
+        "pre5_pct": 27.2,
+        "day0_pct": 14.0,
+        "category": "市場織り込み済み"
       }
     },
     {
@@ -578,6 +753,11 @@
         "next_day": "2026-05-29",
         "next_day_return_pct": 7.46,
         "grade": "mid"
+      },
+      "reaction": {
+        "pre5_pct": 10.7,
+        "day0_pct": 1.2,
+        "category": "素直な反応"
       }
     },
     {
@@ -593,6 +773,11 @@
         "next_day": "2026-06-15",
         "next_day_return_pct": 11.96,
         "grade": "high"
+      },
+      "reaction": {
+        "pre5_pct": 3.9,
+        "day0_pct": 7.6,
+        "category": "素直な反応"
       }
     },
     {
@@ -608,6 +793,11 @@
         "next_day": "2026-06-25",
         "next_day_return_pct": 12.27,
         "grade": "high"
+      },
+      "reaction": {
+        "pre5_pct": -3.6,
+        "day0_pct": 0.2,
+        "category": "素直な反応"
       }
     },
     {
@@ -623,6 +813,11 @@
         "next_day": "2026-07-01",
         "next_day_return_pct": -1.73,
         "grade": "low"
+      },
+      "reaction": {
+        "pre5_pct": -2.8,
+        "day0_pct": 1.4,
+        "category": "無風"
       }
     },
     {
@@ -638,6 +833,11 @@
         "next_day": "2026-07-03",
         "next_day_return_pct": 9.23,
         "grade": "mid"
+      },
+      "reaction": {
+        "pre5_pct": -26.6,
+        "day0_pct": -13.5,
+        "category": "悪材料出尽くし"
       }
     },
     {
@@ -653,6 +853,11 @@
         "next_day": "2026-07-21",
         "next_day_return_pct": 17.18,
         "grade": "high"
+      },
+      "reaction": {
+        "pre5_pct": -32.3,
+        "day0_pct": -16.1,
+        "category": "悪材料出尽くし"
       }
     },
     {
@@ -674,6 +879,11 @@
         "next_day": "2026-08-03",
         "next_day_return_pct": 5.72,
         "grade": "mid"
+      },
+      "reaction": {
+        "pre5_pct": -17.0,
+        "day0_pct": 17.7,
+        "category": "悪材料出尽くし"
       }
     },
     {
@@ -689,6 +899,11 @@
         "next_day": "2026-08-04",
         "next_day_return_pct": 5.96,
         "grade": "mid"
+      },
+      "reaction": {
+        "pre5_pct": -9.9,
+        "day0_pct": 5.7,
+        "category": "悪材料出尽くし"
       }
     },
     {
@@ -706,6 +921,11 @@
         "next_day": "2026-08-12",
         "next_day_return_pct": 3.87,
         "grade": "low"
+      },
+      "reaction": {
+        "pre5_pct": -2.3,
+        "day0_pct": 0.6,
+        "category": "無風"
       }
     },
     {
@@ -721,6 +941,11 @@
         "next_day": "2026-08-18",
         "next_day_return_pct": -7.58,
         "grade": "mid"
+      },
+      "reaction": {
+        "pre5_pct": 29.6,
+        "day0_pct": 15.1,
+        "category": "素直な反応"
       }
     },
     {
@@ -740,6 +965,11 @@
         "next_day": "2026-08-28",
         "next_day_return_pct": -8.76,
         "grade": "mid"
+      },
+      "reaction": {
+        "pre5_pct": -0.8,
+        "day0_pct": 5.0,
+        "category": "素直な反応"
       }
     },
     {
@@ -755,6 +985,11 @@
         "next_day": "2026-09-16",
         "next_day_return_pct": -1.87,
         "grade": "low"
+      },
+      "reaction": {
+        "pre5_pct": -9.9,
+        "day0_pct": 2.3,
+        "category": "無風"
       }
     },
     {
@@ -770,6 +1005,11 @@
         "next_day": "2026-10-01",
         "next_day_return_pct": 5.55,
         "grade": "mid"
+      },
+      "reaction": {
+        "pre5_pct": -0.5,
+        "day0_pct": 1.2,
+        "category": "素直な反応"
       }
     },
     {
@@ -785,6 +1025,11 @@
         "next_day": "2026-10-14",
         "next_day_return_pct": -3.23,
         "grade": "low"
+      },
+      "reaction": {
+        "pre5_pct": -20.6,
+        "day0_pct": -13.3,
+        "category": "無風"
       }
     },
     {
@@ -804,6 +1049,11 @@
         "next_day": null,
         "next_day_return_pct": null,
         "grade": "unknown"
+      },
+      "reaction": {
+        "pre5_pct": 5.6,
+        "day0_pct": -7.1,
+        "category": "unknown"
       }
     }
   ]
