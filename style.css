@@ -84,7 +84,7 @@ body {
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
-  opacity: 0.13;
+  opacity: 0.22;
 }
 
 .board-bg-inner {
@@ -138,7 +138,7 @@ body {
 .stock-dashboard {
   display: flex;
   justify-content: space-between;
-  background: rgba(0, 15, 35, 0.85);
+  background: rgba(0, 15, 35, 0.72);
   border: 1px solid #0088cc;
   border-radius: 6px;
   padding: 6px 8px;
@@ -198,7 +198,7 @@ body {
 
 /* 液晶演出ボックス（NAND SUPER CYCLE RUSH） */
 .screen-effect {
-  background: radial-gradient(circle, rgba(255, 100, 0, 0.2) 0%, rgba(0,0,0,0.8) 100%);
+  background: radial-gradient(circle, rgba(255, 100, 0, 0.2) 0%, rgba(0,0,0,0.6) 100%);
   border: 2px solid #ffaa00;
   border-radius: 6px;
   padding: 8px;
@@ -247,7 +247,7 @@ body {
 /* 下部銘柄チッカー */
 .stock-ticker-bar {
   font-size: 8px;
-  background: #000;
+  background: rgba(0, 0, 0, 0.72);
   padding: 3px;
   border-radius: 4px;
   display: flex;
@@ -263,7 +263,7 @@ body {
 .board-bar {
   margin-top: 3px;
   font-size: 9px;
-  background: #101010;
+  background: rgba(16, 16, 16, 0.78);
   padding: 3px 6px;
   border-radius: 4px;
   display: flex;
