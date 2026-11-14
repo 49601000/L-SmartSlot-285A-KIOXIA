@@ -196,9 +196,13 @@ body {
 .screen-effect {
   background: transparent;
   border: none;
-  padding: 8px;
+  padding: 6px 8px;
   text-align: left;
-  align-self: flex-start;
+  /* イベント表示時と通常時で枠の縦幅が変わらないよう、イベント時の高さで固定 */
+  height: 58px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .rush-sub {
@@ -222,11 +226,18 @@ body {
   color: #ff3300;
   text-shadow: 0 0 10px #ff3300, 0 0 20px #ffd700;
   letter-spacing: 3px;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .effect-sub {
   font-size: 9px;
   color: #333a55;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* 下部銘柄チッカー */
