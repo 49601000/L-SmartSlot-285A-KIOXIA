@@ -50,12 +50,41 @@ body {
 }
 
 .top-price-title {
-  font-size: 20px;
+  font-size: 12px;
   font-weight: 900;
   color: #fff;
   letter-spacing: 3px;
   font-family: 'Arial Black', sans-serif;
   text-shadow: 0 2px 0 #7a0070, 0 0 14px rgba(255, 0, 180, 0.9);
+}
+
+.top-price-hero {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.top-price-val {
+  font-size: 28px;
+  font-weight: 900;
+  color: #fff;
+  font-family: monospace;
+  text-shadow: 0 2px 0 #7a0070, 0 0 12px rgba(255, 0, 180, 0.8);
+}
+
+.top-price-unit {
+  font-size: 11px;
+  color: #ffe27a;
+  font-weight: bold;
+}
+
+.top-price-hero .stock-diff {
+  font-size: 11px;
+  color: #fff;
+  background: rgba(10, 0, 18, 0.4);
+  padding: 1px 6px;
+  border-radius: 8px;
 }
 
 .top-prev-close {
@@ -134,86 +163,15 @@ body {
   padding: 0 4px;
 }
 
-/* ステージ表示バッジ（トーンは日本式：上昇=赤、下落=緑） */
-.stage-badge {
-  display: inline-block;
-  margin-top: 2px;
-  font-size: 9px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  padding: 1px 5px;
-  border: 1px solid #ff5fd2;
-  border-radius: 3px;
-  color: #ffb3ec;
-  background: rgba(0, 0, 0, 0.45);
-}
-
-.stage-badge.tone-rise { border-color: #ff7043; color: #ffab91; }
-.stage-badge.tone-peak { border-color: #ffd700; color: #ffd700; box-shadow: 0 0 6px rgba(255, 215, 0, 0.6); }
-.stage-badge.tone-crash { border-color: #00e676; color: #69f0ae; }
-.stage-badge.tone-recover { border-color: #ffaa00; color: #ffcc80; }
-
-/* ステージ表示は背景の上に重ねる小さなレイヤー（液晶の右上） */
-.main-screen > .stage-badge.stage-overlay {
-  position: absolute;
-  top: 5px;
-  left: 6px;
-  z-index: 3;
-  margin-top: 0;
-  font-size: 8px;
-  letter-spacing: 0.5px;
-  padding: 1px 4px;
-  background: rgba(10, 0, 18, 0.55);
-}
-
-/* ステージトーンで液晶の枠色を寄せる */
-.main-screen.tone-rise { border-color: #ff7043; }
-.main-screen.tone-peak { border-color: #ffd700; box-shadow: inset 0 0 20px rgba(0,0,0,0.9), 0 0 14px rgba(255, 215, 0, 0.45); }
-.main-screen.tone-crash { border-color: #00e676; }
-.main-screen.tone-recover { border-color: #ffaa00; }
-
-/* 株価ダッシュボード */
-.stock-dashboard {
-  display: flex;
-  justify-content: space-between;
-  background: transparent;
-  border: none;
-  padding: 6px 8px;
-  margin-top: 12px;
-}
-
-.stock-title {
-  font-size: 11px;
-  color: #2a0a3a;
-  font-weight: bold;
-}
-
-.stock-date {
-  font-size: 10px;
-  color: #44405a;
-  font-family: monospace;
-}
-
-.stock-price-hero {
-  display: flex;
-  align-items: baseline;
-  gap: 2px;
-}
-
-.price-val {
-  font-size: 20px;
-  font-weight: 900;
-  color: #14041f;
-  font-family: monospace;
-}
-
-.price-unit {
-  font-size: 10px;
-  color: #555;
-}
 
 .stock-diff.plus { color: #d81b1b; font-size: 10px; font-weight: bold; }
 .stock-diff.minus { color: #00913f; font-size: 10px; font-weight: bold; }
+
+.lcd-logo-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 /* 板情報詳細 */
 .stock-details {
@@ -241,17 +199,6 @@ body {
   padding: 8px;
   text-align: left;
   align-self: flex-start;
-}
-
-.catch-phrase {
-  font-size: 9px;
-  color: #7b1fa2;
-  letter-spacing: 2px;
-  font-weight: bold;
-}
-
-.rush-logo-box {
-  margin: 2px 0;
 }
 
 .rush-sub {

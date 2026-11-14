@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>スマスロ285A キオクシア</title>
-  <link rel="stylesheet" href="style.css?v=20261114-8">
+  <link rel="stylesheet" href="style.css?v=20261114-9">
 </head>
 <body>
 
@@ -14,9 +14,13 @@
     【非公式パロディ】実在の企業・人物とは関係ありません。（設定1固定 / DEMO MODE）
   </div>
 
-  <!-- 最上部：285A 株価＋前日終値 -->
+  <!-- 最上部：285A 株価（当日終値・前日比・前日終値） -->
   <div class="top-logo-panel">
     <div class="top-price-title">285A 株価</div>
+    <div class="top-price-hero">
+      <span class="top-price-val" id="price285A">—</span><span class="top-price-unit">円</span>
+      <span class="stock-diff plus" id="diff285A">—</span>
+    </div>
     <div class="top-prev-close"><span class="top-prev-label">前日終値</span><span class="top-prev-val" id="valOpen">—</span></div>
   </div>
 
@@ -24,33 +28,23 @@
   <div class="main-screen" id="mainScreen">
     <!-- ステージ背景：その営業日（無ければ直近の掲示板日）のYahoo!ファイナンス掲示板投稿が下から上へ流れ続ける -->
     <div class="board-bg" id="boardBg"><div class="board-bg-inner" id="boardBgInner"></div></div>
-    <!-- ステージ表示：背景レイヤーの上に小さく重ねる（右上） -->
-    <div class="stage-badge stage-overlay tone-base" id="stageBadge">STAGE - </div>
-    <!-- 上部：リアル株価＆板情報ボード -->
+    <!-- 上部：左にNAND SUPER CYCLE、右に日付と板情報 -->
     <div class="stock-dashboard">
-      <div class="stock-main-info">
-        <div class="stock-title">285A キオクシア</div>
-        <div class="stock-date" id="valDate">----/--/--</div>
-        <div class="stock-price-hero">
-          <span class="price-val" id="price285A">6,329</span><span class="price-unit">円</span>
-          <span class="stock-diff plus" id="diff285A">▲ +63 (+1.00%)</span>
-        </div>
+      <div class="lcd-logo-block">
+        <div class="rush-sub">NAND</div>
+        <div class="rush-main">SUPER CYCLE</div>
       </div>
-      <!-- 終値JSON連携時は 前日終値・その日までの最高／最安終値・営業日を表示 -->
       <div class="stock-details">
+        <div class="detail-row"><span>日付</span><span id="valDate">----/--/--</span></div>
         <div class="detail-row"><span class="highlight-high">最高終値</span><span class="highlight-high" id="valHigh">6,350</span></div>
         <div class="detail-row"><span>最安終値</span><span id="valLow">6,180</span></div>
         <div class="detail-row"><span>営業日</span><span id="valVolume">-</span></div>
       </div>
     </div>
 
-    <!-- 液晶中央：RUSHロゴ＆演出エリア -->
+    <!-- 液晶中央：演出エリア -->
     <div class="screen-effect" id="screenEffect">
-      <div class="rush-logo-box">
-        <div class="rush-sub">NAND</div>
-        <div class="rush-main">SUPER CYCLE</div>
-        <div class="rush-title" id="effectTitle">RUSH</div>
-      </div>
+      <div class="rush-title" id="effectTitle"></div>
       <div class="effect-sub" id="effectSub">【IR速報】市況監視中...</div>
     </div>
 
@@ -151,6 +145,6 @@
   </div>
 </div>
 
-<script src="script.js?v=20261114-8"></script>
+<script src="script.js?v=20261114-9"></script>
 </body>
 </html>

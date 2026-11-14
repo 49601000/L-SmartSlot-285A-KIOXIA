@@ -177,11 +177,11 @@ document.addEventListener("DOMContentLoaded", () => {
         state.lastChangePct = pct;
       } else {
         if (elDiff285A) {
-          elDiff285A.textContent = "— （上場日）";
+          elDiff285A.textContent = "—";
           elDiff285A.className = "stock-diff plus";
         }
         if (elTicker285A) {
-          elTicker285A.textContent = `${fmtPrice(cur.close)} （上場日）`;
+          elTicker285A.textContent = `${fmtPrice(cur.close)}`;
           elTicker285A.className = 'plus';
         }
         state.lastChangePct = 0;
@@ -359,7 +359,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (elEffectTitle) elEffectTitle.textContent = "🍉 設備投資ログ確認";
       if (elEffectSub) elEffectSub.textContent = "市況好転の兆し...？";
     } else {
-      if (elEffectTitle) elEffectTitle.textContent = "RUSH";
+      if (elEffectTitle) elEffectTitle.textContent = "";
       if (elEffectSub) elEffectSub.textContent = "【IR速報】市況監視中...";
     }
   }
