@@ -207,8 +207,16 @@
       "title": "2025年3月期 第3四半期の決算発表資料をご覧いただけます。",
       "source": "キオクシアホールディングス公式IRニュース",
       "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
-      "images": [],
-      "status": "metadata_only"
+      "images": [
+        "materials/ir/MAT-IR-20250214-3/page-01.svg",
+        "materials/ir/MAT-IR-20250214-3/page-02.svg"
+      ],
+      "status": "stored_image",
+      "article_url": "https://www.kioxia-holdings.com/ja-jp/ir/library/presentation.html",
+      "capture_method": "web_page_print_pdf",
+      "pages": 2,
+      "image_format": "svg-wrapped-jpeg",
+      "note": "ウェブ記事のため、当初予定のスクリーンショットがブラウザ環境の制約でファイル化できず、記事ページをPDF保存してページ画像化した（2026-11-14）。"
     },
     {
       "id": "MAT-IR-20250414-1",
@@ -325,8 +333,15 @@
       "title": "取締役候補者について",
       "source": "キオクシアホールディングス公式IRニュース",
       "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
-      "images": [],
-      "status": "metadata_only"
+      "images": [
+        "materials/ir/MAT-IR-20250526-2/page-01.svg"
+      ],
+      "status": "stored_image",
+      "article_url": "https://www.kioxia-holdings.com/ja-jp/news/2025/20250526-1.html",
+      "capture_method": "web_page_print_pdf",
+      "pages": 1,
+      "image_format": "svg-wrapped-jpeg",
+      "note": "ウェブ記事のため、当初予定のスクリーンショットがブラウザ環境の制約でファイル化できず、記事ページをPDF保存してページ画像化した（2026-11-14）。"
     },
     {
       "id": "MAT-IR-20250602-1",
@@ -356,8 +371,15 @@
       "title": "経営方針説明会の資料をご覧いただけます。",
       "source": "キオクシアホールディングス公式IRニュース",
       "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
-      "images": [],
-      "status": "metadata_only"
+      "images": [
+        "materials/ir/MAT-IR-20250605-1/page-01.svg"
+      ],
+      "status": "stored_image",
+      "article_url": "https://www.kioxia-holdings.com/ja-jp/ir/library/event.html",
+      "capture_method": "web_page_print_pdf",
+      "pages": 1,
+      "image_format": "svg-wrapped-jpeg",
+      "note": "ウェブ記事のため、当初予定のスクリーンショットがブラウザ環境の制約でファイル化できず、記事ページをPDF保存してページ画像化した（2026-11-14）。"
     },
     {
       "id": "MAT-IR-20250623-1",
@@ -646,8 +668,15 @@
       "title": "「アナリストDAY」資料を掲載しました。",
       "source": "キオクシアホールディングス公式IRニュース",
       "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
-      "images": [],
-      "status": "metadata_only"
+      "images": [
+        "materials/ir/MAT-IR-20251029-1/page-01.svg"
+      ],
+      "status": "stored_image",
+      "article_url": "https://www.kioxia-holdings.com/ja-jp/ir/library/event.html",
+      "capture_method": "web_page_print_pdf",
+      "pages": 1,
+      "image_format": "svg-wrapped-jpeg",
+      "note": "ウェブ記事のため、当初予定のスクリーンショットがブラウザ環境の制約でファイル化できず、記事ページをPDF保存してページ画像化した（2026-11-14）。"
     },
     {
       "id": "MAT-IR-20251030-1",
@@ -659,8 +688,16 @@
       "title": "「統合報告書2025」を公開しました。",
       "source": "キオクシアホールディングス公式IRニュース",
       "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
-      "images": [],
-      "status": "metadata_only"
+      "images": [
+        "materials/ir/MAT-IR-20251030-1/page-01.svg",
+        "materials/ir/MAT-IR-20251030-1/page-02.svg"
+      ],
+      "status": "stored_image",
+      "article_url": "https://www.kioxia-holdings.com/ja-jp/ir/library/integrated-report.html",
+      "capture_method": "web_page_print_pdf",
+      "pages": 2,
+      "image_format": "svg-wrapped-jpeg",
+      "note": "ウェブ記事のため、当初予定のスクリーンショットがブラウザ環境の制約でファイル化できず、記事ページをPDF保存してページ画像化した（2026-11-14）。"
     },
     {
       "id": "MAT-IR-20251113-1",
@@ -825,8 +862,17 @@
       "title": "（動画）社長交代に関する記者会見",
       "source": "キオクシアホールディングス公式IRニュース",
       "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
-      "images": [],
-      "status": "metadata_only"
+      "images": [
+        "materials/ir/MAT-IR-20260130-2/page-01.svg",
+        "materials/ir/MAT-IR-20260130-2/page-02.svg",
+        "materials/ir/MAT-IR-20260130-2/page-03.svg"
+      ],
+      "status": "stored_image",
+      "article_url": "https://www.kioxia-holdings.com/ja-jp/news/2026/20260130-1.html",
+      "capture_method": "web_page_print_pdf",
+      "pages": 3,
+      "image_format": "svg-wrapped-jpeg",
+      "note": "ウェブ記事のため、当初予定のスクリーンショットがブラウザ環境の制約でファイル化できず、記事ページをPDF保存してページ画像化した（2026-11-14）。"
     },
     {
       "id": "MAT-IR-20260212-1",
@@ -912,8 +958,16 @@
       "title": "執行役員人事について",
       "source": "キオクシアホールディングス公式IRニュース",
       "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
-      "images": [],
-      "status": "metadata_only"
+      "images": [
+        "materials/ir/MAT-IR-20260227-1/page-01.svg",
+        "materials/ir/MAT-IR-20260227-1/page-02.svg"
+      ],
+      "status": "stored_image",
+      "article_url": "https://www.kioxia-holdings.com/ja-jp/news/2026/20260227-1.html",
+      "capture_method": "web_page_print_pdf",
+      "pages": 2,
+      "image_format": "svg-wrapped-jpeg",
+      "note": "ウェブ記事のため、当初予定のスクリーンショットがブラウザ環境の制約でファイル化できず、記事ページをPDF保存してページ画像化した（2026-11-14）。"
     },
     {
       "id": "MAT-IR-20260227-2",
@@ -925,8 +979,15 @@
       "title": "財務統括責任者（CFO）の異動について",
       "source": "キオクシアホールディングス公式IRニュース",
       "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
-      "images": [],
-      "status": "metadata_only"
+      "images": [
+        "materials/ir/MAT-IR-20260227-2/page-01.svg"
+      ],
+      "status": "stored_image",
+      "article_url": "https://www.kioxia-holdings.com/ja-jp/news/2026/20260227-2.html",
+      "capture_method": "web_page_print_pdf",
+      "pages": 1,
+      "image_format": "svg-wrapped-jpeg",
+      "note": "ウェブ記事のため、当初予定のスクリーンショットがブラウザ環境の制約でファイル化できず、記事ページをPDF保存してページ画像化した（2026-11-14）。"
     },
     {
       "id": "MAT-IR-20260305-1",
@@ -938,8 +999,15 @@
       "title": "日経平均株価を構成する225銘柄にキオクシアホールディングスが採用",
       "source": "キオクシアホールディングス公式IRニュース",
       "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
-      "images": [],
-      "status": "metadata_only"
+      "images": [
+        "materials/ir/MAT-IR-20260305-1/page-01.svg"
+      ],
+      "status": "stored_image",
+      "article_url": "https://www.kioxia-holdings.com/ja-jp/news/2026/20260305-1.html",
+      "capture_method": "web_page_print_pdf",
+      "pages": 1,
+      "image_format": "svg-wrapped-jpeg",
+      "note": "ウェブ記事のため、当初予定のスクリーンショットがブラウザ環境の制約でファイル化できず、記事ページをPDF保存してページ画像化した（2026-11-14）。"
     },
     {
       "id": "MAT-IR-20260325-1",
@@ -1156,8 +1224,17 @@
       "title": "取締役候補者及び監査役候補者について",
       "source": "キオクシアホールディングス公式IRニュース",
       "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
-      "images": [],
-      "status": "metadata_only"
+      "images": [
+        "materials/ir/MAT-IR-20260515-7/page-01.svg",
+        "materials/ir/MAT-IR-20260515-7/page-02.svg",
+        "materials/ir/MAT-IR-20260515-7/page-03.svg"
+      ],
+      "status": "stored_image",
+      "article_url": "https://www.kioxia-holdings.com/ja-jp/news/2026/20260515-1.html",
+      "capture_method": "web_page_print_pdf",
+      "pages": 3,
+      "image_format": "svg-wrapped-jpeg",
+      "note": "ウェブ記事のため、当初予定のスクリーンショットがブラウザ環境の制約でファイル化できず、記事ページをPDF保存してページ画像化した（2026-11-14）。"
     },
     {
       "id": "MAT-IR-20260525-1",
@@ -1169,8 +1246,15 @@
       "title": "S&Pとフィッチによる信用格付が投資適格「BBB-」へ格上げ",
       "source": "キオクシアホールディングス公式IRニュース",
       "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
-      "images": [],
-      "status": "metadata_only"
+      "images": [
+        "materials/ir/MAT-IR-20260525-1/page-01.svg"
+      ],
+      "status": "stored_image",
+      "article_url": "https://www.kioxia-holdings.com/ja-jp/news/2026/20260525-1.html",
+      "capture_method": "web_page_print_pdf",
+      "pages": 1,
+      "image_format": "svg-wrapped-jpeg",
+      "note": "ウェブ記事のため、当初予定のスクリーンショットがブラウザ環境の制約でファイル化できず、記事ページをPDF保存してページ画像化した（2026-11-14）。"
     },
     {
       "id": "MAT-IR-20260528-1",
@@ -1182,8 +1266,16 @@
       "title": "機関投資家・証券アナリスト向け「Investor Day」6月2日夕方実施(予定)",
       "source": "キオクシアホールディングス公式IRニュース",
       "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
-      "images": [],
-      "status": "metadata_only"
+      "images": [
+        "materials/ir/MAT-IR-20260528-1/page-01.svg",
+        "materials/ir/MAT-IR-20260528-1/page-02.svg"
+      ],
+      "status": "stored_image",
+      "article_url": "https://www.kioxia-holdings.com/ja-jp/ir/calendar.html",
+      "capture_method": "web_page_print_pdf",
+      "pages": 2,
+      "image_format": "svg-wrapped-jpeg",
+      "note": "ウェブ記事のため、当初予定のスクリーンショットがブラウザ環境の制約でファイル化できず、記事ページをPDF保存してページ画像化した（2026-11-14）。"
     },
     {
       "id": "MAT-IR-20260612-1",
@@ -1480,9 +1572,15 @@
       "title": "キオクシアとサンディスク、日本で約5兆円を投資しメモリ分野でのリーダーシップを強化",
       "source": "キオクシアホールディングス公式IRニュース",
       "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
-      "images": [],
-      "status": "web_only",
-      "note": "原文はkioxia.comのウェブ記事のみでPDF版はない（2026-11-14確認）。同一のプレスリリース本文は適時開示 MAT-IR-20260827-1 のPDF第2ページ（別添）に含まれ、そちらで画像化済み。"
+      "images": [
+        "materials/ir/MAT-IR-20260827-2/page-01.svg"
+      ],
+      "status": "stored_image",
+      "note": "原文はkioxia.comのウェブ記事のみでPDF版はない（2026-11-14確認）。同一のプレスリリース本文は適時開示 MAT-IR-20260827-1 のPDF第2ページ（別添）に含まれ、そちらで画像化済み。 ウェブ記事のため、当初予定のスクリーンショットがブラウザ環境の制約でファイル化できず、記事ページをPDF保存してページ画像化した（2026-11-14）。",
+      "article_url": "https://www.kioxia.com/ja-jp/about/news/2026/20260827-3.html",
+      "capture_method": "web_page_print_pdf",
+      "pages": 1,
+      "image_format": "svg-wrapped-jpeg"
     },
     {
       "id": "MAT-IR-20260827-3",
@@ -1494,8 +1592,15 @@
       "title": "北上工場 新製造棟（K3棟）の建設について",
       "source": "キオクシアホールディングス公式IRニュース",
       "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
-      "images": [],
-      "status": "metadata_only"
+      "images": [
+        "materials/ir/MAT-IR-20260827-3/page-01.svg"
+      ],
+      "status": "stored_image",
+      "article_url": "https://www.kioxia.com/ja-jp/about/news/2026/20260827-2.html",
+      "capture_method": "web_page_print_pdf",
+      "pages": 1,
+      "image_format": "svg-wrapped-jpeg",
+      "note": "ウェブ記事のため、当初予定のスクリーンショットがブラウザ環境の制約でファイル化できず、記事ページをPDF保存してページ画像化した（2026-11-14）。"
     },
     {
       "id": "MAT-IR-20260915-1",
@@ -1507,8 +1612,15 @@
       "title": "一部報道について",
       "source": "キオクシアホールディングス公式IRニュース",
       "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
-      "images": [],
-      "status": "metadata_only"
+      "images": [
+        "materials/ir/MAT-IR-20260915-1/page-01.svg"
+      ],
+      "status": "stored_image",
+      "article_url": "https://www.kioxia-holdings.com/ja-jp/news/2026/20260915-1.html",
+      "capture_method": "web_page_print_pdf",
+      "pages": 1,
+      "image_format": "svg-wrapped-jpeg",
+      "note": "ウェブ記事のため、当初予定のスクリーンショットがブラウザ環境の制約でファイル化できず、記事ページをPDF保存してページ画像化した（2026-11-14）。"
     },
     {
       "id": "MAT-IR-20260930-1",
@@ -1534,8 +1646,15 @@
       "title": "S&Pによる信用格付が「BBB」へ格上げ",
       "source": "キオクシアホールディングス公式IRニュース",
       "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
-      "images": [],
-      "status": "metadata_only"
+      "images": [
+        "materials/ir/MAT-IR-20261013-1/page-01.svg"
+      ],
+      "status": "stored_image",
+      "article_url": "https://www.kioxia-holdings.com/ja-jp/news/2026/20261013-1.html",
+      "capture_method": "web_page_print_pdf",
+      "pages": 1,
+      "image_format": "svg-wrapped-jpeg",
+      "note": "ウェブ記事のため、当初予定のスクリーンショットがブラウザ環境の制約でファイル化できず、記事ページをPDF保存してページ画像化した（2026-11-14）。"
     },
     {
       "id": "MAT-IR-20261030-1",
