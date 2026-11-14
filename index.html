@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>スマスロ285A キオクシア</title>
-  <link rel="stylesheet" href="style.css?v=20261114-3">
+  <link rel="stylesheet" href="style.css?v=20261114-4">
 </head>
 <body>
 
@@ -23,12 +23,13 @@
   <div class="main-screen" id="mainScreen">
     <!-- ステージ背景：その営業日（無ければ直近の掲示板日）のYahoo!ファイナンス掲示板投稿が下から上へ流れ続ける -->
     <div class="board-bg" id="boardBg"><div class="board-bg-inner" id="boardBgInner"></div></div>
+    <!-- ステージ表示：背景レイヤーの上に小さく重ねる（右上） -->
+    <div class="stage-badge stage-overlay tone-base" id="stageBadge">STAGE - </div>
     <!-- 上部：リアル株価＆板情報ボード -->
     <div class="stock-dashboard">
       <div class="stock-main-info">
         <div class="stock-title">285A キオクシア</div>
         <div class="stock-date" id="valDate">----/--/--</div>
-        <div class="stage-badge tone-base" id="stageBadge">STAGE - </div>
         <div class="stock-price-hero">
           <span class="price-val" id="price285A">6,329</span><span class="price-unit">円</span>
           <span class="stock-diff plus" id="diff285A">▲ +63 (+1.00%)</span>
@@ -153,6 +154,6 @@
   </div>
 </div>
 
-<script src="script.js?v=20261114-3"></script>
+<script src="script.js?v=20261114-4"></script>
 </body>
 </html>

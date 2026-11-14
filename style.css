@@ -78,14 +78,14 @@ body {
   z-index: 1;
 }
 
-/* ステージ背景：Yahoo!掲示板風シート（白地＋黒文字）のスクロール */
+/* ステージ背景：Yahoo!掲示板風シート（白地＋黒文字・透過）のスクロール */
 .board-bg {
   position: absolute;
   inset: 4px;
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.42);
   border-radius: 6px;
 }
 
@@ -130,6 +130,19 @@ body {
 .stage-badge.tone-peak { border-color: #ffd700; color: #ffd700; box-shadow: 0 0 6px rgba(255, 215, 0, 0.6); }
 .stage-badge.tone-crash { border-color: #00e676; color: #69f0ae; }
 .stage-badge.tone-recover { border-color: #ffaa00; color: #ffcc80; }
+
+/* ステージ表示は背景の上に重ねる小さなレイヤー（液晶の右上） */
+.main-screen > .stage-badge.stage-overlay {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 3;
+  margin-top: 0;
+  font-size: 8px;
+  letter-spacing: 0.5px;
+  padding: 1px 4px;
+  background: rgba(10, 0, 18, 0.55);
+}
 
 /* ステージトーンで液晶の枠色を寄せる */
 .main-screen.tone-rise { border-color: #ff7043; }

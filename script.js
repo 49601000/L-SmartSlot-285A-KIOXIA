@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
     currentStageId = s.id;
     if (elStageBadge) {
       elStageBadge.textContent = `STAGE ${s.id} ${s.name}`;
-      elStageBadge.className = `stage-badge tone-${s.tone}`;
+      elStageBadge.className = `stage-badge stage-overlay tone-${s.tone}`;
     }
     if (elMainScreen) {
       elMainScreen.classList.remove(...TONE_CLASSES);
