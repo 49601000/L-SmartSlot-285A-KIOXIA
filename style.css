@@ -217,7 +217,8 @@ body {
   background: transparent;
   border: none;
   padding: 8px;
-  text-align: center;
+  text-align: left;
+  align-self: flex-start;
 }
 
 .catch-phrase {
