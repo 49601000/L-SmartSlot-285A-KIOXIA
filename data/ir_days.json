@@ -1,0 +1,810 @@
+{
+  "days": [
+    {
+      "date": "2024-12-18",
+      "headline_id": "MAT-IR-20241218-1",
+      "item_ids": [
+        "MAT-IR-20241218-1",
+        "MAT-IR-20241218-2",
+        "MAT-IR-20241218-3"
+      ],
+      "titles": [
+        "東京証券取引所プライム市場への上場のお知らせ",
+        "東京証券取引所プライム市場への上場に伴う当社決算情報等のお知らせ",
+        "上場維持基準への適合に向けた計画について"
+      ],
+      "market_sensitivity": {
+        "next_day": "2024-12-19",
+        "next_day_return_pct": 7.43,
+        "grade": "mid"
+      }
+    },
+    {
+      "date": "2025-01-16",
+      "headline_id": "MAT-IR-20250116-1",
+      "item_ids": [
+        "MAT-IR-20250116-1"
+      ],
+      "titles": [
+        "2025年3月期 第3四半期 決算発表 2月14日（予定）"
+      ],
+      "market_sensitivity": {
+        "next_day": "2025-01-17",
+        "next_day_return_pct": 0.0,
+        "grade": "low"
+      }
+    },
+    {
+      "date": "2025-02-14",
+      "headline_id": "MAT-IR-20250214-2",
+      "item_ids": [
+        "MAT-IR-20250214-1",
+        "MAT-IR-20250214-2",
+        "MAT-IR-20250214-3"
+      ],
+      "titles": [
+        "業績予想に関するお知らせ",
+        "2025年３月期 第３四半期決算短信〔ＩＦＲＳ〕（連結）",
+        "2025年3月期 第3四半期の決算発表資料をご覧いただけます。"
+      ],
+      "market_sensitivity": {
+        "next_day": "2025-02-17",
+        "next_day_return_pct": 9.03,
+        "grade": "mid"
+      }
+    },
+    {
+      "date": "2025-04-14",
+      "headline_id": "MAT-IR-20250414-1",
+      "item_ids": [
+        "MAT-IR-20250414-1"
+      ],
+      "titles": [
+        "2025年3月期 決算発表 5月15日（木）15:30（予定）"
+      ],
+      "market_sensitivity": {
+        "next_day": "2025-04-15",
+        "next_day_return_pct": -0.1,
+        "grade": "low"
+      }
+    },
+    {
+      "date": "2025-05-15",
+      "headline_id": "MAT-IR-20250515-3",
+      "item_ids": [
+        "MAT-IR-20250515-1",
+        "MAT-IR-20250515-2",
+        "MAT-IR-20250515-3"
+      ],
+      "titles": [
+        "優先株式に係る剰余金の配当に関するお知らせ",
+        "支配株主等に関する事項について",
+        "2025年３月期 決算短信〔ＩＦＲＳ〕（連結）"
+      ],
+      "market_sensitivity": {
+        "next_day": "2025-05-16",
+        "next_day_return_pct": 0.27,
+        "grade": "low"
+      }
+    },
+    {
+      "date": "2025-05-26",
+      "headline_id": "MAT-IR-20250526-1",
+      "item_ids": [
+        "MAT-IR-20250526-1",
+        "MAT-IR-20250526-2"
+      ],
+      "titles": [
+        "当社及び当社子会社の役員に対する株式報酬制度の導入に関するお知らせ",
+        "取締役候補者について"
+      ],
+      "market_sensitivity": {
+        "next_day": "2025-05-27",
+        "next_day_return_pct": -0.24,
+        "grade": "low"
+      }
+    },
+    {
+      "date": "2025-06-02",
+      "headline_id": "MAT-IR-20250602-1",
+      "item_ids": [
+        "MAT-IR-20250602-1"
+      ],
+      "titles": [
+        "純資産減少割合の確定に関するお知らせ"
+      ],
+      "market_sensitivity": {
+        "next_day": "2025-06-03",
+        "next_day_return_pct": -0.65,
+        "grade": "low"
+      }
+    },
+    {
+      "date": "2025-06-05",
+      "headline_id": "MAT-IR-20250605-1",
+      "item_ids": [
+        "MAT-IR-20250605-1"
+      ],
+      "titles": [
+        "経営方針説明会の資料をご覧いただけます。"
+      ],
+      "market_sensitivity": {
+        "next_day": "2025-06-06",
+        "next_day_return_pct": 2.32,
+        "grade": "low"
+      }
+    },
+    {
+      "date": "2025-06-23",
+      "headline_id": "MAT-IR-20250623-1",
+      "item_ids": [
+        "MAT-IR-20250623-1"
+      ],
+      "titles": [
+        "当社株式の貸借銘柄選定に関するお知らせ"
+      ],
+      "market_sensitivity": {
+        "next_day": "2025-06-24",
+        "next_day_return_pct": -0.19,
+        "grade": "low"
+      }
+    },
+    {
+      "date": "2025-06-26",
+      "headline_id": "MAT-IR-20250626-1",
+      "item_ids": [
+        "MAT-IR-20250626-1"
+      ],
+      "titles": [
+        "2025年3月期 有価証券報告書"
+      ],
+      "market_sensitivity": {
+        "next_day": "2025-06-27",
+        "next_day_return_pct": -0.28,
+        "grade": "low"
+      }
+    },
+    {
+      "date": "2025-06-27",
+      "headline_id": "MAT-IR-20250627-1",
+      "item_ids": [
+        "MAT-IR-20250627-1",
+        "MAT-IR-20250627-2"
+      ],
+      "titles": [
+        "非上場の親会社等の決算に関するお知らせ",
+        "上場維持基準への適合に向けた計画に基づく進捗状況について（大規模な公募及び売出しを伴う新規上場に係る特例適用）"
+      ],
+      "market_sensitivity": {
+        "next_day": "2025-06-30",
+        "next_day_return_pct": -0.79,
+        "grade": "low"
+      }
+    },
+    {
+      "date": "2025-07-02",
+      "headline_id": "MAT-IR-20250702-1",
+      "item_ids": [
+        "MAT-IR-20250702-1"
+      ],
+      "titles": [
+        "コーポレート・ガバナンスに関する報告書"
+      ],
+      "market_sensitivity": {
+        "next_day": "2025-07-03",
+        "next_day_return_pct": 5.64,
+        "grade": "mid"
+      }
+    },
+    {
+      "date": "2025-07-07",
+      "headline_id": "MAT-IR-20250707-1",
+      "item_ids": [
+        "MAT-IR-20250707-1"
+      ],
+      "titles": [
+        "2026年3月期 第1四半期 決算発表 8月8日 15:30（予定）"
+      ],
+      "market_sensitivity": {
+        "next_day": "2025-07-08",
+        "next_day_return_pct": 3.82,
+        "grade": "low"
+      }
+    },
+    {
+      "date": "2025-07-14",
+      "headline_id": "MAT-IR-20250714-1",
+      "item_ids": [
+        "MAT-IR-20250714-1"
+      ],
+      "titles": [
+        "当社の資本負債構成のリストラクチャリング計画及び自己株式（甲種優先株式及び乙種優先株式）の取得に係る事項の決定に関するお知らせ"
+      ],
+      "market_sensitivity": {
+        "next_day": "2025-07-15",
+        "next_day_return_pct": 0.53,
+        "grade": "low"
+      }
+    },
+    {
+      "date": "2025-07-17",
+      "headline_id": "MAT-IR-20250717-1",
+      "item_ids": [
+        "MAT-IR-20250717-1"
+      ],
+      "titles": [
+        "当社の資本負債構成のリストラクチャリング計画の詳細決定、自己株式の取得及び消却並びに財務上の特約が付された金銭消費貸借の締結に関するお知らせ"
+      ],
+      "market_sensitivity": {
+        "next_day": "2025-07-18",
+        "next_day_return_pct": -2.53,
+        "grade": "low"
+      }
+    },
+    {
+      "date": "2025-07-25",
+      "headline_id": "MAT-IR-20250725-2",
+      "item_ids": [
+        "MAT-IR-20250725-1",
+        "MAT-IR-20250725-2"
+      ],
+      "titles": [
+        "自己株式（甲種優先株式及び乙種優先株式）の取得及び消却の完了に関するお知らせ",
+        "勤務継続型株式報酬制度及び業績連動型株式報酬制度のユニット付与に関するお知らせ"
+      ],
+      "market_sensitivity": {
+        "next_day": "2025-07-28",
+        "next_day_return_pct": -0.12,
+        "grade": "low"
+      }
+    },
+    {
+      "date": "2025-08-08",
+      "headline_id": "MAT-IR-20250808-1",
+      "item_ids": [
+        "MAT-IR-20250808-1"
+      ],
+      "titles": [
+        "2026年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）"
+      ],
+      "market_sensitivity": {
+        "next_day": "2025-08-12",
+        "next_day_return_pct": 10.74,
+        "grade": "high"
+      }
+    },
+    {
+      "date": "2025-10-10",
+      "headline_id": "MAT-IR-20251010-1",
+      "item_ids": [
+        "MAT-IR-20251010-1"
+      ],
+      "titles": [
+        "2026年3月期 第2四半期 決算発表 11月13日 15:30（予定）"
+      ],
+      "market_sensitivity": {
+        "next_day": "2025-10-14",
+        "next_day_return_pct": -2.6,
+        "grade": "low"
+      }
+    },
+    {
+      "date": "2025-10-27",
+      "headline_id": "MAT-IR-20251027-1",
+      "item_ids": [
+        "MAT-IR-20251027-1"
+      ],
+      "titles": [
+        "主要株主である筆頭株主の異動に関するお知らせ"
+      ],
+      "market_sensitivity": {
+        "next_day": "2025-10-28",
+        "next_day_return_pct": -4.38,
+        "grade": "low"
+      }
+    },
+    {
+      "date": "2025-10-29",
+      "headline_id": "MAT-IR-20251029-1",
+      "item_ids": [
+        "MAT-IR-20251029-1"
+      ],
+      "titles": [
+        "「アナリストDAY」資料を掲載しました。"
+      ],
+      "market_sensitivity": {
+        "next_day": "2025-10-30",
+        "next_day_return_pct": 8.13,
+        "grade": "mid"
+      }
+    },
+    {
+      "date": "2025-10-30",
+      "headline_id": "MAT-IR-20251030-1",
+      "item_ids": [
+        "MAT-IR-20251030-1"
+      ],
+      "titles": [
+        "「統合報告書2025」を公開しました。"
+      ],
+      "market_sensitivity": {
+        "next_day": "2025-10-31",
+        "next_day_return_pct": -0.69,
+        "grade": "low"
+      }
+    },
+    {
+      "date": "2025-11-13",
+      "headline_id": "MAT-IR-20251113-2",
+      "item_ids": [
+        "MAT-IR-20251113-1",
+        "MAT-IR-20251113-2",
+        "MAT-IR-20251113-3"
+      ],
+      "titles": [
+        "上場維持基準への適合に関するお知らせ",
+        "2026年３月期 第２四半期（中間期）決算短信〔ＩＦＲＳ〕（連結）",
+        "2026年3月期 半期報告書"
+      ],
+      "market_sensitivity": {
+        "next_day": "2025-11-14",
+        "next_day_return_pct": -23.03,
+        "grade": "high"
+      }
+    },
+    {
+      "date": "2025-12-04",
+      "headline_id": "MAT-IR-20251204-1",
+      "item_ids": [
+        "MAT-IR-20251204-1"
+      ],
+      "titles": [
+        "主要株主である筆頭株主の異動に関するお知らせ"
+      ],
+      "market_sensitivity": {
+        "next_day": "2025-12-05",
+        "next_day_return_pct": 3.97,
+        "grade": "low"
+      }
+    },
+    {
+      "date": "2026-01-09",
+      "headline_id": "MAT-IR-20260109-1",
+      "item_ids": [
+        "MAT-IR-20260109-1"
+      ],
+      "titles": [
+        "2026年3月期 第3四半期 決算発表 2月12日 15:30（予定）"
+      ],
+      "market_sensitivity": {
+        "next_day": "2026-01-13",
+        "next_day_return_pct": 7.84,
+        "grade": "mid"
+      }
+    },
+    {
+      "date": "2026-01-29",
+      "headline_id": "MAT-IR-20260129-1",
+      "item_ids": [
+        "MAT-IR-20260129-1"
+      ],
+      "titles": [
+        "代表取締役の異動に関するお知らせ"
+      ],
+      "market_sensitivity": {
+        "next_day": "2026-01-30",
+        "next_day_return_pct": 10.99,
+        "grade": "high"
+      }
+    },
+    {
+      "date": "2026-01-30",
+      "headline_id": "MAT-IR-20260130-1",
+      "item_ids": [
+        "MAT-IR-20260130-1",
+        "MAT-IR-20260130-2"
+      ],
+      "titles": [
+        "四日市工場における合弁会社の契約期間延長について",
+        "（動画）社長交代に関する記者会見"
+      ],
+      "market_sensitivity": {
+        "next_day": "2026-02-02",
+        "next_day_return_pct": -14.04,
+        "grade": "high"
+      }
+    },
+    {
+      "date": "2026-02-12",
+      "headline_id": "MAT-IR-20260212-1",
+      "item_ids": [
+        "MAT-IR-20260212-1"
+      ],
+      "titles": [
+        "2026年３月期 第３四半期決算短信〔ＩＦＲＳ〕（連結）"
+      ],
+      "market_sensitivity": {
+        "next_day": "2026-02-13",
+        "next_day_return_pct": 7.89,
+        "grade": "mid"
+      }
+    },
+    {
+      "date": "2026-02-26",
+      "headline_id": "MAT-IR-20260226-1",
+      "item_ids": [
+        "MAT-IR-20260226-1"
+      ],
+      "titles": [
+        "主要株主の異動に関するお知らせ"
+      ],
+      "market_sensitivity": {
+        "next_day": "2026-02-27",
+        "next_day_return_pct": -0.14,
+        "grade": "low"
+      }
+    },
+    {
+      "date": "2026-02-27",
+      "headline_id": "MAT-IR-20260227-1",
+      "item_ids": [
+        "MAT-IR-20260227-1",
+        "MAT-IR-20260227-2"
+      ],
+      "titles": [
+        "執行役員人事について",
+        "財務統括責任者（CFO）の異動について"
+      ],
+      "market_sensitivity": {
+        "next_day": "2026-03-02",
+        "next_day_return_pct": 1.44,
+        "grade": "low"
+      }
+    },
+    {
+      "date": "2026-03-05",
+      "headline_id": "MAT-IR-20260305-1",
+      "item_ids": [
+        "MAT-IR-20260305-1"
+      ],
+      "titles": [
+        "日経平均株価を構成する225銘柄にキオクシアホールディングスが採用"
+      ],
+      "market_sensitivity": {
+        "next_day": "2026-03-06",
+        "next_day_return_pct": -1.6,
+        "grade": "low"
+      }
+    },
+    {
+      "date": "2026-03-25",
+      "headline_id": "MAT-IR-20260325-1",
+      "item_ids": [
+        "MAT-IR-20260325-1",
+        "MAT-IR-20260325-2"
+      ],
+      "titles": [
+        "Nanya Technology Corporationの第三者割当増資引受及びDRAM長期供給契約締結に関するお知らせ",
+        "（訂正）「勤務継続型株式報酬制度及び業績連動型株式報酬制度のユニット付与に関するお知らせ」の一部訂正について"
+      ],
+      "market_sensitivity": {
+        "next_day": "2026-03-26",
+        "next_day_return_pct": -5.7,
+        "grade": "mid"
+      }
+    },
+    {
+      "date": "2026-03-26",
+      "headline_id": "MAT-IR-20260326-1",
+      "item_ids": [
+        "MAT-IR-20260326-1"
+      ],
+      "titles": [
+        "その他の関係会社の異動に関するお知らせ"
+      ],
+      "market_sensitivity": {
+        "next_day": "2026-03-27",
+        "next_day_return_pct": -4.23,
+        "grade": "low"
+      }
+    },
+    {
+      "date": "2026-04-10",
+      "headline_id": "MAT-IR-20260410-1",
+      "item_ids": [
+        "MAT-IR-20260410-1"
+      ],
+      "titles": [
+        "2026年3月期 決算発表 5月15日 15:30（予定）"
+      ],
+      "market_sensitivity": {
+        "next_day": "2026-04-13",
+        "next_day_return_pct": 3.75,
+        "grade": "low"
+      }
+    },
+    {
+      "date": "2026-05-15",
+      "headline_id": "MAT-IR-20260515-1",
+      "item_ids": [
+        "MAT-IR-20260515-1",
+        "MAT-IR-20260515-2",
+        "MAT-IR-20260515-3",
+        "MAT-IR-20260515-4",
+        "MAT-IR-20260515-5",
+        "MAT-IR-20260515-6",
+        "MAT-IR-20260515-7"
+      ],
+      "titles": [
+        "2026年３月期 決算短信〔ＩＦＲＳ〕（連結）",
+        "連結子会社からの配当金及び資本の払戻しに関するお知らせ",
+        "当社普通株式を対象とした米国預託株式の米国の証券取引所への上場準備に関するお知らせ",
+        "投資単位の引下げに関する考え方及び方針等について",
+        "定款の一部変更に関するお知らせ",
+        "当社及び当社子会社の役員に対する株式報酬制度の改定に関するお知らせ",
+        "取締役候補者及び監査役候補者について"
+      ],
+      "market_sensitivity": {
+        "next_day": "2026-05-18",
+        "next_day_return_pct": 15.75,
+        "grade": "high"
+      }
+    },
+    {
+      "date": "2026-05-25",
+      "headline_id": "MAT-IR-20260525-1",
+      "item_ids": [
+        "MAT-IR-20260525-1"
+      ],
+      "titles": [
+        "S&Pとフィッチによる信用格付が投資適格「BBB-」へ格上げ"
+      ],
+      "market_sensitivity": {
+        "next_day": "2026-05-26",
+        "next_day_return_pct": -4.57,
+        "grade": "low"
+      }
+    },
+    {
+      "date": "2026-05-28",
+      "headline_id": "MAT-IR-20260528-1",
+      "item_ids": [
+        "MAT-IR-20260528-1"
+      ],
+      "titles": [
+        "機関投資家・証券アナリスト向け「Investor Day」6月2日夕方実施(予定)"
+      ],
+      "market_sensitivity": {
+        "next_day": "2026-05-29",
+        "next_day_return_pct": 7.46,
+        "grade": "mid"
+      }
+    },
+    {
+      "date": "2026-06-12",
+      "headline_id": "MAT-IR-20260612-1",
+      "item_ids": [
+        "MAT-IR-20260612-1"
+      ],
+      "titles": [
+        "（訂正）「当社及び当社子会社の役員に対する株式報酬制度の改定に関するお知らせ」の一部訂正について"
+      ],
+      "market_sensitivity": {
+        "next_day": "2026-06-15",
+        "next_day_return_pct": 11.96,
+        "grade": "high"
+      }
+    },
+    {
+      "date": "2026-06-24",
+      "headline_id": "MAT-IR-20260624-1",
+      "item_ids": [
+        "MAT-IR-20260624-1"
+      ],
+      "titles": [
+        "2026年3月期 有価証券報告書"
+      ],
+      "market_sensitivity": {
+        "next_day": "2026-06-25",
+        "next_day_return_pct": 12.27,
+        "grade": "high"
+      }
+    },
+    {
+      "date": "2026-06-30",
+      "headline_id": "MAT-IR-20260630-1",
+      "item_ids": [
+        "MAT-IR-20260630-1"
+      ],
+      "titles": [
+        "2027年3月期 第1四半期 決算発表 7月31日 15:30（予定）"
+      ],
+      "market_sensitivity": {
+        "next_day": "2026-07-01",
+        "next_day_return_pct": -1.73,
+        "grade": "low"
+      }
+    },
+    {
+      "date": "2026-07-02",
+      "headline_id": "MAT-IR-20260702-1",
+      "item_ids": [
+        "MAT-IR-20260702-1"
+      ],
+      "titles": [
+        "（訂正）「勤務継続型株式報酬制度及び業績連動型株式報酬制度のユニット付与に関するお知らせ」の一部訂正について"
+      ],
+      "market_sensitivity": {
+        "next_day": "2026-07-03",
+        "next_day_return_pct": 9.23,
+        "grade": "mid"
+      }
+    },
+    {
+      "date": "2026-07-17",
+      "headline_id": "MAT-IR-20260717-1",
+      "item_ids": [
+        "MAT-IR-20260717-1"
+      ],
+      "titles": [
+        "当社子会社に対する訴訟の陪審評決に関するお知らせ"
+      ],
+      "market_sensitivity": {
+        "next_day": "2026-07-21",
+        "next_day_return_pct": 17.18,
+        "grade": "high"
+      }
+    },
+    {
+      "date": "2026-07-31",
+      "headline_id": "MAT-IR-20260731-1",
+      "item_ids": [
+        "MAT-IR-20260731-1",
+        "MAT-IR-20260731-2",
+        "MAT-IR-20260731-3",
+        "MAT-IR-20260731-4"
+      ],
+      "titles": [
+        "株式分割及び株式分割に伴う定款の一部変更に関するお知らせ",
+        "自己株式の取得枠設定に関するお知らせ",
+        "勤務継続型株式報酬制度及び業績連動型株式報酬制度のユニット付与に関するお知らせ",
+        "2027年３月期 第１四半期決算短信〔ＩＦＲＳ〕（連結）"
+      ],
+      "market_sensitivity": {
+        "next_day": "2026-08-03",
+        "next_day_return_pct": 5.72,
+        "grade": "mid"
+      }
+    },
+    {
+      "date": "2026-08-03",
+      "headline_id": "MAT-IR-20260803-1",
+      "item_ids": [
+        "MAT-IR-20260803-1"
+      ],
+      "titles": [
+        "当社子会社に対する訴訟の判決に関するお知らせ"
+      ],
+      "market_sensitivity": {
+        "next_day": "2026-08-04",
+        "next_day_return_pct": 5.96,
+        "grade": "mid"
+      }
+    },
+    {
+      "date": "2026-08-10",
+      "headline_id": "MAT-IR-20260810-1",
+      "item_ids": [
+        "MAT-IR-20260810-1",
+        "MAT-IR-20260810-2"
+      ],
+      "titles": [
+        "主要株主である筆頭株主の異動に関するお知らせ",
+        "自己株式の取得状況及び取得終了に関するお知らせ"
+      ],
+      "market_sensitivity": {
+        "next_day": "2026-08-12",
+        "next_day_return_pct": 3.87,
+        "grade": "low"
+      }
+    },
+    {
+      "date": "2026-08-17",
+      "headline_id": "MAT-IR-20260817-1",
+      "item_ids": [
+        "MAT-IR-20260817-1"
+      ],
+      "titles": [
+        "（訂正）「主要株主である筆頭株主の異動に関するお知らせ」の一部訂正について"
+      ],
+      "market_sensitivity": {
+        "next_day": "2026-08-18",
+        "next_day_return_pct": -7.58,
+        "grade": "mid"
+      }
+    },
+    {
+      "date": "2026-08-27",
+      "headline_id": "MAT-IR-20260827-1",
+      "item_ids": [
+        "MAT-IR-20260827-1",
+        "MAT-IR-20260827-2",
+        "MAT-IR-20260827-3"
+      ],
+      "titles": [
+        "サンディスクコーポレーションとの投資計画に関するお知らせ",
+        "キオクシアとサンディスク、日本で約5兆円を投資しメモリ分野でのリーダーシップを強化",
+        "北上工場 新製造棟（K3棟）の建設について"
+      ],
+      "market_sensitivity": {
+        "next_day": "2026-08-28",
+        "next_day_return_pct": -8.76,
+        "grade": "mid"
+      }
+    },
+    {
+      "date": "2026-09-15",
+      "headline_id": "MAT-IR-20260915-1",
+      "item_ids": [
+        "MAT-IR-20260915-1"
+      ],
+      "titles": [
+        "一部報道について"
+      ],
+      "market_sensitivity": {
+        "next_day": "2026-09-16",
+        "next_day_return_pct": -1.87,
+        "grade": "low"
+      }
+    },
+    {
+      "date": "2026-09-30",
+      "headline_id": "MAT-IR-20260930-1",
+      "item_ids": [
+        "MAT-IR-20260930-1"
+      ],
+      "titles": [
+        "2027年3月期 第2四半期 決算発表 10月30日 18:45（予定）"
+      ],
+      "market_sensitivity": {
+        "next_day": "2026-10-01",
+        "next_day_return_pct": 5.55,
+        "grade": "mid"
+      }
+    },
+    {
+      "date": "2026-10-13",
+      "headline_id": "MAT-IR-20261013-1",
+      "item_ids": [
+        "MAT-IR-20261013-1"
+      ],
+      "titles": [
+        "S&Pによる信用格付が「BBB」へ格上げ"
+      ],
+      "market_sensitivity": {
+        "next_day": "2026-10-14",
+        "next_day_return_pct": -3.23,
+        "grade": "low"
+      }
+    },
+    {
+      "date": "2026-10-30",
+      "headline_id": "MAT-IR-20261030-1",
+      "item_ids": [
+        "MAT-IR-20261030-1",
+        "MAT-IR-20261030-2",
+        "MAT-IR-20261030-3"
+      ],
+      "titles": [
+        "株主還元方針及び剰余金の配当（中間配当・初配）に関するお知らせ",
+        "連結子会社間の合併に関するお知らせ",
+        "2027年３月期 第２四半期（中間期）決算短信〔ＩＦＲＳ〕（連結）"
+      ],
+      "market_sensitivity": {
+        "next_day": null,
+        "next_day_return_pct": null,
+        "grade": "unknown"
+      }
+    }
+  ]
+}
