@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #04060a;
+  background: radial-gradient(circle at 50% 30%, #2a0a3a 0%, #0a0212 60%, #040008 100%);
   color: #fff;
   font-family: 'Segoe UI', Arial, sans-serif;
   display: flex;
@@ -16,15 +16,15 @@ body {
   padding: 10px;
 }
 
-/* 筐体フレーム：メタリックシルバー＆ブルーネオン */
+/* 筐体フレーム：マゼンタ＆パープルネオン（実機アート寄せ） */
 .pachislot-cabinet {
   width: 100%;
   max-width: 440px;
-  background: linear-gradient(180deg, #101828 0%, #080d1a 50%, #020408 100%);
-  border: 4px solid #00d2ff;
-  border-radius: 16px;
+  background: linear-gradient(180deg, #3d0a4e 0%, #1c0530 45%, #0d0218 100%);
+  border: 4px solid #ff2ea6;
+  border-radius: 20px;
   padding: 12px;
-  box-shadow: 0 0 35px rgba(0, 210, 255, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 38px rgba(255, 46, 166, 0.55), 0 0 90px rgba(147, 51, 234, 0.35), inset 0 0 18px rgba(255, 120, 220, 0.25);
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -33,40 +33,41 @@ body {
 
 .disclaimer {
   font-size: 8px;
-  color: #88a0c0;
+  color: #d8a8cc;
   text-align: center;
   background: rgba(0,0,0,0.6);
   padding: 2px;
 }
 
-/* 最上部：KIOXIA 巨大ロゴ役物 */
+/* 最上部：スパークルパネル＋KIOXIAロゴ */
 .top-logo-panel {
-  background: radial-gradient(circle, #ffffff 0%, #d0e8ff 40%, #004488 100%);
-  border: 2px solid #00d2ff;
-  border-radius: 8px;
-  padding: 6px 0;
+  background: radial-gradient(circle at 50% 20%, #fff0fa 0%, #ff5fd2 38%, #a100f2 72%, #4c0078 100%);
+  border: 2px solid #ffd7f4;
+  border-radius: 10px;
+  padding: 7px 0;
   text-align: center;
-  box-shadow: 0 0 20px rgba(0, 210, 255, 0.8);
+  box-shadow: 0 0 24px rgba(255, 46, 166, 0.85), inset 0 0 14px rgba(255, 255, 255, 0.45);
 }
 
 .top-brand-logo {
   font-size: 28px;
   font-weight: 900;
-  color: #000;
+  color: #fff;
   letter-spacing: 4px;
   font-family: 'Arial Black', sans-serif;
+  text-shadow: 0 2px 0 #7a0070, 0 0 14px rgba(255, 0, 180, 0.9);
 }
 
-/* メイン液晶画面（チャート＆ネオン背景） */
+/* メイン液晶画面（ディープパープル＋ネオンピンク枠） */
 .main-screen {
-  background: linear-gradient(180deg, #021027 0%, #082856 50%, #010814 100%);
-  border: 3px solid #00d2ff;
-  border-radius: 8px;
+  background: linear-gradient(180deg, #1b0533 0%, #3b0764 50%, #0d0217 100%);
+  border: 3px solid #ff2ea6;
+  border-radius: 10px;
   padding: 8px;
   display: flex;
   flex-direction: column;
   gap: 6px;
-  box-shadow: inset 0 0 20px rgba(0,0,0,0.9);
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.9), 0 0 16px rgba(255, 46, 166, 0.35);
   position: relative;
   overflow: hidden;
 }
@@ -77,14 +78,15 @@ body {
   z-index: 1;
 }
 
-/* ステージ背景：掲示板投稿のスクロール（エンジンAの背景利用） */
+/* ステージ背景：Yahoo!掲示板風シート（白地＋黒文字）のスクロール */
 .board-bg {
   position: absolute;
-  inset: 0;
+  inset: 4px;
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
-  opacity: 0.22;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 6px;
 }
 
 .board-bg-inner {
@@ -102,11 +104,12 @@ body {
 .board-bg-line {
   font-size: 9px;
   line-height: 1.5;
-  color: #9fd8ff;
-  font-family: monospace;
+  color: #22252a;
+  font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding: 0 4px;
 }
 
 /* ステージ表示バッジ（トーンは日本式：上昇=赤、下落=緑） */
@@ -117,9 +120,9 @@ body {
   font-weight: bold;
   letter-spacing: 1px;
   padding: 1px 5px;
-  border: 1px solid #80c0ff;
+  border: 1px solid #ff5fd2;
   border-radius: 3px;
-  color: #a8c8e8;
+  color: #ffb3ec;
   background: rgba(0, 0, 0, 0.45);
 }
 
@@ -138,21 +141,21 @@ body {
 .stock-dashboard {
   display: flex;
   justify-content: space-between;
-  background: rgba(0, 15, 35, 0.72);
-  border: 1px solid #0088cc;
+  background: rgba(24, 3, 38, 0.8);
+  border: 1px solid #ff5fd2;
   border-radius: 6px;
   padding: 6px 8px;
 }
 
 .stock-title {
   font-size: 11px;
-  color: #80c0ff;
+  color: #ffb3ec;
   font-weight: bold;
 }
 
 .stock-date {
   font-size: 10px;
-  color: #a8c8e8;
+  color: #e8b8dc;
   font-family: monospace;
 }
 
@@ -171,10 +174,10 @@ body {
 
 .price-unit {
   font-size: 10px;
-  color: #aaa;
+  color: #ccc;
 }
 
-.stock-diff.plus { color: #ff3333; font-size: 10px; font-weight: bold; }
+.stock-diff.plus { color: #ff5252; font-size: 10px; font-weight: bold; }
 .stock-diff.minus { color: #00e676; font-size: 10px; font-weight: bold; }
 
 /* 板情報詳細 */
@@ -191,24 +194,24 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 8px;
-  color: #80a0c0;
+  color: #c8a0c0;
 }
 
-.highlight-high { color: #ff5555; }
+.highlight-high { color: #ff7777; }
 
 /* 液晶演出ボックス（NAND SUPER CYCLE RUSH） */
 .screen-effect {
-  background: radial-gradient(circle, rgba(255, 100, 0, 0.2) 0%, rgba(0,0,0,0.6) 100%);
-  border: 2px solid #ffaa00;
+  background: radial-gradient(circle, rgba(255, 46, 166, 0.28) 0%, rgba(8, 0, 16, 0.66) 100%);
+  border: 2px solid #ffd700;
   border-radius: 6px;
   padding: 8px;
   text-align: center;
-  box-shadow: 0 0 15px rgba(255, 170, 0, 0.3);
+  box-shadow: 0 0 16px rgba(255, 215, 0, 0.35), 0 0 22px rgba(255, 46, 166, 0.3);
 }
 
 .catch-phrase {
   font-size: 9px;
-  color: #00d2ff;
+  color: #ff9ff3;
   letter-spacing: 2px;
 }
 
@@ -227,7 +230,7 @@ body {
   font-size: 16px;
   font-weight: 900;
   color: #fff;
-  text-shadow: 0 0 8px #00d2ff;
+  text-shadow: 0 0 8px #ff2ea6;
   letter-spacing: 1px;
 }
 
@@ -241,35 +244,35 @@ body {
 
 .effect-sub {
   font-size: 9px;
-  color: #80d0ff;
+  color: #ffb3ec;
 }
 
 /* 下部銘柄チッカー */
 .stock-ticker-bar {
   font-size: 8px;
-  background: rgba(0, 0, 0, 0.72);
+  background: rgba(8, 0, 16, 0.8);
   padding: 3px;
   border-radius: 4px;
   display: flex;
   justify-content: space-around;
-  color: #aaa;
+  color: #bbb;
   font-family: monospace;
 }
 
-.stock-ticker-bar .plus { color: #ff3333; }
+.stock-ticker-bar .plus { color: #ff5252; }
 .stock-ticker-bar .minus { color: #00e676; }
 
 /* 掲示板バー */
 .board-bar {
   margin-top: 3px;
   font-size: 9px;
-  background: rgba(16, 16, 16, 0.78);
+  background: rgba(18, 2, 28, 0.85);
   padding: 3px 6px;
   border-radius: 4px;
   display: flex;
   gap: 6px;
   align-items: baseline;
-  color: #ccc;
+  color: #eee;
 }
 
 .board-label {
@@ -286,7 +289,7 @@ body {
 }
 
 .board-bar.board-empty {
-  color: #666;
+  color: #888;
 }
 
 /* リール＆BUY/SELLサイドランプ */
@@ -294,10 +297,11 @@ body {
   display: flex;
   align-items: center;
   gap: 4px;
-  background: #000;
+  background: #0a0214;
   padding: 4px;
-  border: 2px solid #00d2ff;
-  border-radius: 8px;
+  border: 2px solid #ff2ea6;
+  border-radius: 10px;
+  box-shadow: 0 0 14px rgba(255, 46, 166, 0.4);
 }
 
 .side-lamp {
@@ -316,14 +320,14 @@ body {
   background: linear-gradient(180deg, #0033aa 0%, #00aaff 100%);
   color: #fff;
   border: 1px solid #00e5ff;
-  box-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.6);
 }
 
 .lamp-sell {
   background: linear-gradient(180deg, #aa0000 0%, #ff3333 100%);
   color: #fff;
   border: 1px solid #ff5252;
-  box-shadow: 0 0 10px rgba(255, 82, 82, 0.5);
+  box-shadow: 0 0 12px rgba(255, 82, 82, 0.6);
 }
 
 .lamp-icon { font-size: 16px; }
@@ -372,19 +376,19 @@ body {
 .symbol-bell { color: #fbc02d; font-size: 16px; }
 .symbol-rep { color: #1976d2; }
 
-/* メーター類 */
+/* メーター類（数値はゴールドで実機の枚数表示寄せ） */
 .info-panel {
   display: flex;
   justify-content: space-between;
-  background: #000;
+  background: #0d0217;
   padding: 6px;
   border-radius: 6px;
-  border: 1px solid #00d2ff;
+  border: 1px solid #ff5fd2;
 }
 
 .info-box { text-align: center; }
-.info-box .label { font-size: 8px; color: #80c0ff; }
-.info-box .val { font-size: 14px; color: #00ff66; font-family: monospace; font-weight: bold; }
+.info-box .label { font-size: 8px; color: #ff9ff3; }
+.info-box .val { font-size: 14px; color: #ffd700; font-family: monospace; font-weight: bold; text-shadow: 0 0 6px rgba(255, 170, 0, 0.55); }
 
 /* 操作ボタン */
 .control-panel {
@@ -394,18 +398,18 @@ body {
 }
 
 .btn-lever {
-  background: linear-gradient(180deg, #00c853 0%, #1b5e20 100%);
-  color: #fff;
+  background: linear-gradient(180deg, #ffe066 0%, #ffb300 55%, #ff8f00 100%);
+  color: #3a1500;
   padding: 10px;
   font-size: 14px;
   font-weight: 900;
   border-radius: 8px;
-  border: 2px solid #69f0ae;
-  box-shadow: 0 4px 0 #003300, 0 0 10px rgba(0, 230, 118, 0.4);
+  border: 2px solid #fff2b0;
+  box-shadow: 0 4px 0 #7a4d00, 0 0 14px rgba(255, 179, 0, 0.55);
   cursor: pointer;
 }
 
-.btn-lever:disabled { background: #444; border-color: #666; box-shadow: none; }
+.btn-lever:disabled { background: #444; border-color: #666; box-shadow: none; color: #999; }
 
 .stop-buttons {
   display: flex;
@@ -416,9 +420,9 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #ff5252, #b71c1c);
-  border: 3px solid #fff;
-  box-shadow: 0 4px 0 #5f0000, 0 0 12px rgba(255, 0, 0, 0.6);
+  background: radial-gradient(circle at 30% 30%, #ff7043, #d84315);
+  border: 3px solid #ffd7f4;
+  box-shadow: 0 4px 0 #5f0000, 0 0 12px rgba(255, 80, 0, 0.6);
   cursor: pointer;
 }
 
@@ -428,22 +432,30 @@ body {
   box-shadow: none;
 }
 
-/* 下パネル（メインアート再現） */
+/* 下パネル（実機アート再現：マゼンタグラデ＋シルバーロゴ） */
 .lower-panel {
-  background: linear-gradient(135deg, #021027 0%, #0a3570 50%, #000000 100%);
-  border: 2px solid #00d2ff;
-  border-radius: 8px;
+  background: linear-gradient(135deg, #3b0764 0%, #a100f2 45%, #ff2ea6 100%);
+  border: 2px solid #ff5fd2;
+  border-radius: 10px;
   padding: 10px;
   text-align: center;
-  box-shadow: inset 0 0 15px rgba(0, 210, 255, 0.5);
+  box-shadow: inset 0 0 16px rgba(255, 255, 255, 0.35), 0 0 16px rgba(255, 46, 166, 0.45);
 }
 
-.panel-title-sub { font-size: 10px; color: #00d2ff; }
-.panel-title-main { font-size: 26px; font-weight: 900; color: #fff; text-shadow: 0 0 10px #00d2ff; }
-.panel-title-kioxia { font-size: 20px; font-weight: 900; color: #fff; }
-.panel-title-sub2 { font-size: 11px; color: #ff5252; }
-.panel-copy { font-size: 8px; color: #aaa; margin-top: 4px; }
+.panel-title-sub { font-size: 10px; color: #ffe27a; font-weight: bold; }
+.panel-title-main {
+  font-size: 26px;
+  font-weight: 900;
+  background: linear-gradient(180deg, #ffffff 20%, #ffd7f4 55%, #c0c8ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 8px rgba(90, 0, 80, 0.45);
+}
+.panel-title-kioxia { font-size: 20px; font-weight: 900; color: #fff; text-shadow: 0 0 8px rgba(255, 0, 180, 0.8); }
+.panel-title-sub2 { font-size: 11px; color: #ffd700; font-weight: bold; }
+.panel-copy { font-size: 8px; color: #ffd7f4; margin-top: 4px; }
 
 /* デバッグ */
 .debug-panel { display: flex; gap: 4px; justify-content: center; }
-.debug-panel button { background: #111; color: #666; border: 1px solid #333; font-size: 8px; padding: 2px 4px; }
+.debug-panel button { background: #1c0530; color: #a88; border: 1px solid #533; font-size: 8px; padding: 2px 4px; }
