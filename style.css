@@ -49,13 +49,35 @@ body {
   box-shadow: 0 0 24px rgba(255, 46, 166, 0.85), inset 0 0 14px rgba(255, 255, 255, 0.45);
 }
 
-.top-brand-logo {
-  font-size: 28px;
+.top-price-title {
+  font-size: 20px;
   font-weight: 900;
   color: #fff;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   font-family: 'Arial Black', sans-serif;
   text-shadow: 0 2px 0 #7a0070, 0 0 14px rgba(255, 0, 180, 0.9);
+}
+
+.top-prev-close {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.top-prev-label {
+  font-size: 10px;
+  font-weight: bold;
+  color: #ffe27a;
+}
+
+.top-prev-val {
+  font-size: 18px;
+  font-weight: 900;
+  color: #fff;
+  font-family: monospace;
+  text-shadow: 0 0 8px rgba(255, 0, 180, 0.7);
 }
 
 /* メイン液晶画面（ディープパープル＋ネオンピンク枠） */

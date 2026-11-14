@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>スマスロ285A キオクシア</title>
-  <link rel="stylesheet" href="style.css?v=20261114-7">
+  <link rel="stylesheet" href="style.css?v=20261114-8">
 </head>
 <body>
 
@@ -14,9 +14,10 @@
     【非公式パロディ】実在の企業・人物とは関係ありません。（設定1固定 / DEMO MODE）
   </div>
 
-  <!-- 最上部：KIOXIA 巨大ネオン役物 -->
+  <!-- 最上部：285A 株価＋前日終値 -->
   <div class="top-logo-panel">
-    <div class="top-brand-logo">KIOXIA</div>
+    <div class="top-price-title">285A 株価</div>
+    <div class="top-prev-close"><span class="top-prev-label">前日終値</span><span class="top-prev-val" id="valOpen">—</span></div>
   </div>
 
   <!-- メイン液晶エリア（サイバーブルー＆株式チャート風） -->
@@ -37,7 +38,6 @@
       </div>
       <!-- 終値JSON連携時は 前日終値・その日までの最高／最安終値・営業日を表示 -->
       <div class="stock-details">
-        <div class="detail-row"><span>前日終値</span><span id="valOpen">6,210</span></div>
         <div class="detail-row"><span class="highlight-high">最高終値</span><span class="highlight-high" id="valHigh">6,350</span></div>
         <div class="detail-row"><span>最安終値</span><span id="valLow">6,180</span></div>
         <div class="detail-row"><span>営業日</span><span id="valVolume">-</span></div>
@@ -151,6 +151,6 @@
   </div>
 </div>
 
-<script src="script.js?v=20261114-7"></script>
+<script src="script.js?v=20261114-8"></script>
 </body>
 </html>
