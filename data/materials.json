@@ -387,8 +387,24 @@
       "title": "2025年3月期 有価証券報告書",
       "source": "キオクシアホールディングス公式IRニュース",
       "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
-      "images": [],
-      "status": "metadata_only"
+      "images": [
+        "materials/ir/MAT-IR-20250626-1/page-01.svg",
+        "materials/ir/MAT-IR-20250626-1/page-02.svg",
+        "materials/ir/MAT-IR-20250626-1/page-03.svg",
+        "materials/ir/MAT-IR-20250626-1/page-04.svg",
+        "materials/ir/MAT-IR-20250626-1/page-05.svg",
+        "materials/ir/MAT-IR-20250626-1/page-06.svg",
+        "materials/ir/MAT-IR-20250626-1/page-07.svg",
+        "materials/ir/MAT-IR-20250626-1/page-08.svg",
+        "materials/ir/MAT-IR-20250626-1/page-09.svg",
+        "materials/ir/MAT-IR-20250626-1/page-10.svg"
+      ],
+      "status": "stored_image",
+      "pdf_url": "https://ssl4.eir-parts.net/doc/285A/yuho_pdf/S100W440/00.pdf",
+      "pages": 10,
+      "pages_total": 193,
+      "image_format": "svg-wrapped-jpeg",
+      "note": "全193ページ中、冒頭10ページのみ画像化して格納（2026-11-14ユーザー決定）。全文は pdf_url 参照。"
     },
     {
       "id": "MAT-IR-20250627-1",
@@ -709,8 +725,24 @@
       "title": "2026年3月期 半期報告書",
       "source": "キオクシアホールディングス公式IRニュース",
       "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
-      "images": [],
-      "status": "metadata_only"
+      "images": [
+        "materials/ir/MAT-IR-20251113-3/page-01.svg",
+        "materials/ir/MAT-IR-20251113-3/page-02.svg",
+        "materials/ir/MAT-IR-20251113-3/page-03.svg",
+        "materials/ir/MAT-IR-20251113-3/page-04.svg",
+        "materials/ir/MAT-IR-20251113-3/page-05.svg",
+        "materials/ir/MAT-IR-20251113-3/page-06.svg",
+        "materials/ir/MAT-IR-20251113-3/page-07.svg",
+        "materials/ir/MAT-IR-20251113-3/page-08.svg",
+        "materials/ir/MAT-IR-20251113-3/page-09.svg",
+        "materials/ir/MAT-IR-20251113-3/page-10.svg"
+      ],
+      "status": "stored_image",
+      "pdf_url": "https://ssl4.eir-parts.net/doc/285A/yuho_pdf/S100X3DB/00.pdf",
+      "pages": 10,
+      "pages_total": 46,
+      "image_format": "svg-wrapped-jpeg",
+      "note": "全46ページ中、冒頭10ページのみ画像化して格納（2026-11-14ユーザー決定）。全文は pdf_url 参照。"
     },
     {
       "id": "MAT-IR-20251204-1",
@@ -1182,8 +1214,24 @@
       "title": "2026年3月期 有価証券報告書",
       "source": "キオクシアホールディングス公式IRニュース",
       "source_page": "https://www.kioxia-holdings.com/ja-jp/ir/news.html",
-      "images": [],
-      "status": "metadata_only"
+      "images": [
+        "materials/ir/MAT-IR-20260624-1/page-01.svg",
+        "materials/ir/MAT-IR-20260624-1/page-02.svg",
+        "materials/ir/MAT-IR-20260624-1/page-03.svg",
+        "materials/ir/MAT-IR-20260624-1/page-04.svg",
+        "materials/ir/MAT-IR-20260624-1/page-05.svg",
+        "materials/ir/MAT-IR-20260624-1/page-06.svg",
+        "materials/ir/MAT-IR-20260624-1/page-07.svg",
+        "materials/ir/MAT-IR-20260624-1/page-08.svg",
+        "materials/ir/MAT-IR-20260624-1/page-09.svg",
+        "materials/ir/MAT-IR-20260624-1/page-10.svg"
+      ],
+      "status": "stored_image",
+      "pdf_url": "https://ssl4.eir-parts.net/doc/285A/yuho_pdf/S100YJ18/00.pdf",
+      "pages": 10,
+      "pages_total": 192,
+      "image_format": "svg-wrapped-jpeg",
+      "note": "全192ページ中、冒頭10ページのみ画像化して格納（2026-11-14ユーザー決定）。全文は pdf_url 参照。"
     },
     {
       "id": "MAT-IR-20260630-1",
