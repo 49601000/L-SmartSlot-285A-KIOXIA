@@ -134,8 +134,8 @@ body {
 /* ステージ表示は背景の上に重ねる小さなレイヤー（液晶の右上） */
 .main-screen > .stage-badge.stage-overlay {
   position: absolute;
-  top: 6px;
-  right: 6px;
+  top: 5px;
+  left: 6px;
   z-index: 3;
   margin-top: 0;
   font-size: 8px;
@@ -154,21 +154,21 @@ body {
 .stock-dashboard {
   display: flex;
   justify-content: space-between;
-  background: rgba(24, 3, 38, 0.8);
-  border: 1px solid #ff5fd2;
-  border-radius: 6px;
+  background: transparent;
+  border: none;
   padding: 6px 8px;
+  margin-top: 12px;
 }
 
 .stock-title {
   font-size: 11px;
-  color: #ffb3ec;
+  color: #2a0a3a;
   font-weight: bold;
 }
 
 .stock-date {
   font-size: 10px;
-  color: #e8b8dc;
+  color: #44405a;
   font-family: monospace;
 }
 
@@ -181,17 +181,17 @@ body {
 .price-val {
   font-size: 20px;
   font-weight: 900;
-  color: #fff;
+  color: #14041f;
   font-family: monospace;
 }
 
 .price-unit {
   font-size: 10px;
-  color: #ccc;
+  color: #555;
 }
 
-.stock-diff.plus { color: #ff5252; font-size: 10px; font-weight: bold; }
-.stock-diff.minus { color: #00e676; font-size: 10px; font-weight: bold; }
+.stock-diff.plus { color: #d81b1b; font-size: 10px; font-weight: bold; }
+.stock-diff.minus { color: #00913f; font-size: 10px; font-weight: bold; }
 
 /* 板情報詳細 */
 .stock-details {
@@ -207,25 +207,24 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 8px;
-  color: #c8a0c0;
+  color: #3a3450;
 }
 
-.highlight-high { color: #ff7777; }
+.highlight-high { color: #d32f2f; }
 
 /* 液晶演出ボックス（NAND SUPER CYCLE RUSH） */
 .screen-effect {
-  background: radial-gradient(circle, rgba(255, 46, 166, 0.28) 0%, rgba(8, 0, 16, 0.66) 100%);
-  border: 2px solid #ffd700;
-  border-radius: 6px;
+  background: transparent;
+  border: none;
   padding: 8px;
   text-align: center;
-  box-shadow: 0 0 16px rgba(255, 215, 0, 0.35), 0 0 22px rgba(255, 46, 166, 0.3);
 }
 
 .catch-phrase {
   font-size: 9px;
-  color: #ff9ff3;
+  color: #7b1fa2;
   letter-spacing: 2px;
+  font-weight: bold;
 }
 
 .rush-logo-box {
@@ -235,15 +234,15 @@ body {
 .rush-sub {
   font-size: 14px;
   font-weight: 900;
-  color: #ffd700;
-  text-shadow: 0 0 6px #ff6600;
+  color: #c17900;
+  text-shadow: 0 0 6px rgba(255, 102, 0, 0.6);
 }
 
 .rush-main {
   font-size: 16px;
   font-weight: 900;
-  color: #fff;
-  text-shadow: 0 0 8px #ff2ea6;
+  color: #14041f;
+  text-shadow: 0 0 8px rgba(255, 46, 166, 0.65);
   letter-spacing: 1px;
 }
 
@@ -257,7 +256,7 @@ body {
 
 .effect-sub {
   font-size: 9px;
-  color: #ffb3ec;
+  color: #333a55;
 }
 
 /* 下部銘柄チッカー */
