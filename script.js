@@ -23,6 +23,22 @@ document.addEventListener("DOMContentLoaded", () => {
   let boardCursor = 0;
   let boardTimer = null;
   let boardDay = null;
+  let boardBgSourceDay = null;
+
+  // --- ステージ定義（正本は data/stages.json。読めない環境向けに同内容を内蔵） ---
+  // 区切りは実チャートのダイジェスト日付（docs/PRESENTATION_SPEC.md のステージ設計）。
+  const FALLBACK_STAGES = [
+    { id: 0, from: "2024-12-18", to: "2025-08-31", name: "上場・底ばい", tone: "base" },
+    { id: 1, from: "2025-09-01", to: "2025-11-10", name: "初動ブレイク", tone: "rise" },
+    { id: 2, from: "2025-11-11", to: "2026-04-09", name: "調整・A前のベース", tone: "base" },
+    { id: 3, from: "2026-04-10", to: "2026-06-10", name: "上昇・左肩A", tone: "rise" },
+    { id: 4, from: "2026-06-11", to: "2026-06-22", name: "大天井B", tone: "peak" },
+    { id: 5, from: "2026-06-23", to: "2026-07-29", name: "急落①→②", tone: "crash" },
+    { id: 6, from: "2026-07-30", to: "2026-10-02", name: "右肩C・戻り", tone: "recover" },
+    { id: 7, from: "2026-10-03", to: "2026-10-30", name: "下落継続", tone: "crash" }
+  ];
+  let stages = FALLBACK_STAGES;
+  let currentStageId = null;
 
   const IR_EVENTS = [
     { title: "好決算発表！", sub: "純利益が市場予想を大幅上回り！", type: "good" },
@@ -68,6 +84,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const elBoardBar = document.getElementById("boardBar");
   const elBoardLabel = document.getElementById("boardLabel");
   const elBoardPost = document.getElementById("boardPost");
+  const elMainScreen = document.getElementById("mainScreen");
+  const elStageBadge = document.getElementById("stageBadge");
+  const elBoardBg = document.getElementById("boardBg");
 
   const elScreenEffect = document.getElementById("screenEffect");
   const elEffectTitle = document.getElementById("effectTitle");
@@ -82,6 +101,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function fmtPrice(n) {
     return n.toLocaleString("ja-JP", { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+  }
+
+  // ステージ判定と表示（バッジ＋液晶のトーン）
+  function stageForDate(dateStr) {
+    for (const s of stages) {
+      if (dateStr >= s.from && dateStr <= s.to) return s;
+    }
+    return null;
+  }
+
+  const TONE_CLASSES = ["tone-base", "tone-rise", "tone-peak", "tone-crash", "tone-recover"];
+
+  function updateStageUI(dateStr) {
+    const s = stageForDate(dateStr);
+    if (!s) return;
+    currentStageId = s.id;
+    if (elStageBadge) {
+      elStageBadge.textContent = `STAGE ${s.id} ${s.name}`;
+      elStageBadge.className = `stage-badge tone-${s.tone}`;
+    }
+    if (elMainScreen) {
+      elMainScreen.classList.remove(...TONE_CLASSES);
+      if (s.tone !== "base") elMainScreen.classList.add(`tone-${s.tone}`);
+    }
+  }
+
+  async function loadStages() {
+    try {
+      const res = await fetch("data/stages.json");
+      if (!res.ok) return;
+      const json = await res.json();
+      if (json && Array.isArray(json.stages) && json.stages.length > 0) {
+        stages = json.stages;
+        const cur = priceHistory ? priceHistory[state.stockIndex] : null;
+        if (cur) updateStageUI(cur.date);
+      }
+    } catch (e) {
+      // 内蔵定義のまま動作する
+    }
   }
 
   // 株価ダッシュボード更新（エラー回避の安全設計）
@@ -133,6 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (elHigh) elHigh.textContent = fmtPrice(high);
       if (elLow) elLow.textContent = fmtPrice(low);
       if (elVolume) elVolume.textContent = `${i + 1} / ${priceHistory.length}`;
+      updateStageUI(cur.date);
       syncBoardToDay(cur.date);
       return;
     }
@@ -154,6 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (elHigh) elHigh.textContent = data.high;
     if (elLow) elLow.textContent = data.low;
     if (elVolume) elVolume.textContent = data.vol;
+    updateStageUI(data.date.replace(/\//g, "-"));
 
     if (elIrTicker) {
       if (data.type === "alone") {
@@ -395,10 +455,76 @@ document.addEventListener("DOMContentLoaded", () => {
     if (boardTimer) { clearInterval(boardTimer); boardTimer = null; }
   }
 
+  // 指定した掲示板日の投稿を取得（キャッシュ付き）
+  async function fetchBoardPosts(dateStr) {
+    if (boardCache[dateStr]) return boardCache[dateStr];
+    const entry = boardIndex && boardIndex.days ? boardIndex.days[dateStr] : null;
+    if (!entry) { boardCache[dateStr] = []; return boardCache[dateStr]; }
+    try {
+      const res = await fetch(`data/board/${entry.file}`);
+      if (!res.ok) throw new Error("board fetch failed");
+      const json = await res.json();
+      boardCache[dateStr] = json.posts || [];
+    } catch (e) {
+      boardCache[dateStr] = [];
+    }
+    return boardCache[dateStr];
+  }
+
+  // 背景プールの日：その日に掲示板データが無ければ、直近の過去の掲示板日を使う
+  function boardPoolDay(dateStr) {
+    if (!boardIndex || !boardIndex.days) return null;
+    const days = Object.keys(boardIndex.days).sort();
+    if (days.length === 0) return null;
+    let pool = days[0];
+    for (const d of days) {
+      if (d <= dateStr) pool = d; else break;
+    }
+    return pool;
+  }
+
+  // ステージ背景：掲示板投稿を液晶の背景で下から上へ流し続ける（エンジンAの背景利用）
+  async function syncBoardBg(dateStr) {
+    if (!elBoardBg || !boardIndex) return;
+    const poolDay = boardPoolDay(dateStr);
+    if (!poolDay || poolDay === boardBgSourceDay) return;
+    const posts = await fetchBoardPosts(poolDay);
+    if (boardPoolDay(dateStr) !== poolDay) return; // 取得中に日が進んだ場合は破棄
+    if (!posts || posts.length === 0) return;
+    boardBgSourceDay = poolDay;
+
+    const MAX_LINES = 90;
+    const stride = Math.max(1, Math.floor(posts.length / MAX_LINES));
+    const lines = [];
+    for (let i = 0; i < posts.length && lines.length < MAX_LINES; i += stride) {
+      const p = posts[i];
+      const txt = p.text.replace(/\s*\n\s*/g, " ").slice(0, 90);
+      lines.push(`${p.time} No.${p.number} ${txt}`);
+    }
+
+    // アニメーションを最初から再生するため、内側要素を作り直す
+    const old = document.getElementById("boardBgInner");
+    const inner = document.createElement("div");
+    inner.className = "board-bg-inner";
+    inner.id = "boardBgInner";
+    for (let copy = 0; copy < 2; copy++) {
+      for (const line of lines) {
+        const div = document.createElement("div");
+        div.className = "board-bg-line";
+        div.textContent = line;
+        inner.appendChild(div);
+      }
+    }
+    // 1周分（lines.length行 ≒ 13.5px/行）を約9px/秒で流す
+    inner.style.animationDuration = `${Math.max(40, (lines.length * 13.5) / 9)}s`;
+    if (old) old.replaceWith(inner); else elBoardBg.appendChild(inner);
+  }
+
   async function syncBoardToDay(dateStr) {
     if (dateStr === boardDay) return;
     if (!boardIndex) return; // index読み込み後に loadBoardIndex 側から再同期する
     boardDay = dateStr;
+    syncBoardBg(dateStr);
     stopBoardRotation();
     boardPosts = null;
     boardCursor = 0;
@@ -415,16 +541,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (elBoardLabel) elBoardLabel.textContent = `掲示板 ${entry.count}件`;
     elBoardPost.textContent = "読み込み中...";
 
-    if (!boardCache[dateStr]) {
-      try {
-        const res = await fetch(`data/board/${entry.file}`);
-        if (!res.ok) throw new Error("board fetch failed");
-        const json = await res.json();
-        boardCache[dateStr] = json.posts || [];
-      } catch (e) {
-        boardCache[dateStr] = [];
-      }
-    }
+    await fetchBoardPosts(dateStr);
     if (boardDay !== dateStr) return; // 読み込み中に日付が変わった場合は破棄
     boardPosts = boardCache[dateStr];
     if (!boardPosts || boardPosts.length === 0) {
@@ -468,4 +585,5 @@ document.addEventListener("DOMContentLoaded", () => {
   updateUI();
   loadPriceHistory();
   loadBoardIndex();
+  loadStages();
 });

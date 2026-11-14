@@ -67,7 +67,72 @@ body {
   flex-direction: column;
   gap: 6px;
   box-shadow: inset 0 0 20px rgba(0,0,0,0.9);
+  position: relative;
+  overflow: hidden;
 }
+
+/* 液晶の中身は掲示板背景より前面に出す */
+.main-screen > *:not(.board-bg) {
+  position: relative;
+  z-index: 1;
+}
+
+/* ステージ背景：掲示板投稿のスクロール（エンジンAの背景利用） */
+.board-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0.13;
+}
+
+.board-bg-inner {
+  will-change: transform;
+  animation-name: boardBgScroll;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes boardBgScroll {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
+}
+
+.board-bg-line {
+  font-size: 9px;
+  line-height: 1.5;
+  color: #9fd8ff;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ステージ表示バッジ（トーンは日本式：上昇=赤、下落=緑） */
+.stage-badge {
+  display: inline-block;
+  margin-top: 2px;
+  font-size: 9px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 1px 5px;
+  border: 1px solid #80c0ff;
+  border-radius: 3px;
+  color: #a8c8e8;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.stage-badge.tone-rise { border-color: #ff7043; color: #ffab91; }
+.stage-badge.tone-peak { border-color: #ffd700; color: #ffd700; box-shadow: 0 0 6px rgba(255, 215, 0, 0.6); }
+.stage-badge.tone-crash { border-color: #00e676; color: #69f0ae; }
+.stage-badge.tone-recover { border-color: #ffaa00; color: #ffcc80; }
+
+/* ステージトーンで液晶の枠色を寄せる */
+.main-screen.tone-rise { border-color: #ff7043; }
+.main-screen.tone-peak { border-color: #ffd700; box-shadow: inset 0 0 20px rgba(0,0,0,0.9), 0 0 14px rgba(255, 215, 0, 0.45); }
+.main-screen.tone-crash { border-color: #00e676; }
+.main-screen.tone-recover { border-color: #ffaa00; }
 
 /* 株価ダッシュボード */
 .stock-dashboard {

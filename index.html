@@ -20,12 +20,15 @@
   </div>
 
   <!-- メイン液晶エリア（サイバーブルー＆株式チャート風） -->
-  <div class="main-screen">
+  <div class="main-screen" id="mainScreen">
+    <!-- ステージ背景：その営業日（無ければ直近の掲示板日）のYahoo!ファイナンス掲示板投稿が下から上へ流れ続ける -->
+    <div class="board-bg" id="boardBg"><div class="board-bg-inner" id="boardBgInner"></div></div>
     <!-- 上部：リアル株価＆板情報ボード -->
     <div class="stock-dashboard">
       <div class="stock-main-info">
         <div class="stock-title">285A キオクシア</div>
         <div class="stock-date" id="valDate">----/--/--</div>
+        <div class="stage-badge tone-base" id="stageBadge">STAGE - </div>
         <div class="stock-price-hero">
           <span class="price-val" id="price285A">6,329</span><span class="price-unit">円</span>
           <span class="stock-diff plus" id="diff285A">▲ +63 (+1.00%)</span>
